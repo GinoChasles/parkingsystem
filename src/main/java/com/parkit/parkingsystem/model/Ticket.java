@@ -43,6 +43,7 @@ public class Ticket {
         this.price = price;
     }
 
+
     public Date getInTime() {
         return inTime;
     }
