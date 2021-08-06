@@ -13,7 +13,7 @@ public class DataBaseConfig {
         logger.info("Create DB connection");
         Class.forName("com.mysql.cj.jdbc.Driver");
         return DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/prod", System.getenv("MYSQL_USER"), System.getenv("MYSQL_PASSWORD"));
+                "jdbc:mysql://localhost:3306/prod?serverTimezone=UTC", System.getenv("MYSQL_USER"), System.getenv("MYSQL_PASSWORD"));
     }
 
     public void closeConnection(Connection con) {
