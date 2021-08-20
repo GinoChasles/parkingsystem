@@ -18,4 +18,7 @@ public final class App {
         LOGGER.info("Initializing Parking System");
         InteractiveShell.loadInterface();
     }
+
+    private App() {
+    }
 }
