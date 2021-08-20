@@ -6,9 +6,10 @@ import com.parkit.parkingsystem.util.InputReaderUtil;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class InteractiveShell {
+public final class InteractiveShell {
 
-    private static final Logger LOGGER = LogManager.getLogger("InteractiveShell");
+    private static final Logger LOGGER =
+            LogManager.getLogger("InteractiveShell");
 
     public static void loadInterface() {
         LOGGER.info("App initialized!!!");
@@ -18,7 +19,8 @@ public class InteractiveShell {
         InputReaderUtil inputReaderUtil = new InputReaderUtil();
         ParkingSpotDAO parkingSpotDAO = new ParkingSpotDAO();
         TicketDAO ticketDAO = new TicketDAO();
-        ParkingService parkingService = new ParkingService(inputReaderUtil, parkingSpotDAO, ticketDAO);
+        ParkingService parkingService =
+                new ParkingService(inputReaderUtil, parkingSpotDAO, ticketDAO);
 
         while (continueApp) {
             loadMenu();
@@ -37,16 +39,21 @@ public class InteractiveShell {
                     continueApp = false;
                     break;
                 }
-                default: System.out.println("Unsupported option. Please enter a number corresponding to the provided menu");
+                default: System.out.println("Unsupported option."
+                        + " Please enter a number corresponding"
+                        + " to the provided menu");
             }
         }
     }
 
     private static void loadMenu() {
-        System.out.println("Please select an option. Simply enter the number to choose an action");
+        System.out.println("Please select an option. "
+                + "Simply enter the number to choose an action");
         System.out.println("1 New Vehicle Entering - Allocate Parking Space");
         System.out.println("2 Vehicle Exiting - Generate Ticket Price");
         System.out.println("3 Shutdown System");
     }
 
+    private InteractiveShell() {
+    }
 }

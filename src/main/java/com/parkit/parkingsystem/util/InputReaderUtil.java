@@ -11,7 +11,8 @@ import java.util.Scanner;
 public class InputReaderUtil {
 
     private static final Scanner SCAN = new Scanner(System.in);
-    private static final Logger LOGGER = LogManager.getLogger("InputReaderUtil");
+    private static final Logger LOGGER =
+            LogManager.getLogger("InputReaderUtil");
 
     public int readSelection() {
         try {
@@ -19,7 +20,8 @@ public class InputReaderUtil {
             return input;
         } catch (Exception e) {
             LOGGER.error("Error while reading user input from Shell", e);
-            System.out.println("Error reading input. Please enter valid number for proceeding further");
+            System.out.println("Error reading input. "
+                    + "Please enter valid number for proceeding further");
             return -1;
         }
     }
@@ -27,13 +29,15 @@ public class InputReaderUtil {
     public String readVehicleRegistrationNumber() throws Exception {
         try {
             String vehicleRegNumber = SCAN.nextLine();
-            if (vehicleRegNumber == null || vehicleRegNumber.trim().length() == 0) {
+            if (vehicleRegNumber == null
+                    || vehicleRegNumber.trim().length() == 0) {
                 throw new IllegalArgumentException("Invalid input provided");
             }
             return vehicleRegNumber;
         } catch (Exception e) {
             LOGGER.error("Error while reading user input from Shell", e);
-            System.out.println("Error reading input. Please enter a valid string for vehicle registration number");
+            System.out.println("Error reading input. Please enter a"
+                    + " valid string for vehicle registration number");
             throw e;
         }
     }

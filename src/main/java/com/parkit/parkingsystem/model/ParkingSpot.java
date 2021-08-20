@@ -7,7 +7,9 @@ public class ParkingSpot {
     private ParkingType parkingType;
     private boolean isAvailable;
 
-    public ParkingSpot(final int number, final ParkingType parkingType, final boolean isAvailable) {
+    public ParkingSpot(final int number,
+                       final ParkingType parkingType,
+                       final boolean isAvailable) {
         this.number = number;
         this.parkingType = parkingType;
         this.isAvailable = isAvailable;

@@ -9,11 +9,13 @@ public class DataBaseConfig {
 
     private static final Logger LOGGER = LogManager.getLogger("DataBaseConfig");
 
-    public Connection getConnection() throws ClassNotFoundException, SQLException {
+    public Connection getConnection()
+            throws ClassNotFoundException, SQLException {
         LOGGER.info("Create DB connection");
         Class.forName("com.mysql.cj.jdbc.Driver");
         return DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/prod?serverTimezone=UTC", System.getenv("MYSQL_USER"), System.getenv("MYSQL_PASSWORD"));
+                "jdbc:mysql://localhost:3306/prod?serverTimezone=UTC",
+                System.getenv("MYSQL_USER"), System.getenv("MYSQL_PASSWORD"));
     }
 
     public void closeConnection(final Connection con) {
