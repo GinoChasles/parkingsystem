@@ -15,7 +15,7 @@ public class Ticket {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(final int id) {
         this.id = id;
     }
 
@@ -23,7 +23,7 @@ public class Ticket {
         return parkingSpot;
     }
 
-    public void setParkingSpot(ParkingSpot parkingSpot) {
+    public void setParkingSpot(final ParkingSpot parkingSpot) {
         this.parkingSpot = parkingSpot;
     }
 
@@ -31,7 +31,7 @@ public class Ticket {
         return vehicleRegNumber;
     }
 
-    public void setVehicleRegNumber(String vehicleRegNumber) {
+    public void setVehicleRegNumber(final String vehicleRegNumber) {
         this.vehicleRegNumber = vehicleRegNumber;
     }
 
@@ -39,7 +39,7 @@ public class Ticket {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(final double price) {
         this.price = price;
     }
 
