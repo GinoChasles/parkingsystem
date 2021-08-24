@@ -123,16 +123,14 @@ public class ParkingService {
         System.out.println("2 BIKE");
         int input = inputReaderUtil.readSelection();
         switch (input) {
-            case 1: {
+            case 1:
                 return ParkingType.CAR;
-            }
-            case 2: {
+            case 2:
                 return ParkingType.BIKE;
-            }
-            default: {
+            default:
                 System.out.println("Incorrect input provided");
                 throw new IllegalArgumentException("Entered input is invalid");
-            }
+
         }
     }
 
