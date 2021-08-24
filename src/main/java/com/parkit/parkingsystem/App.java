@@ -13,7 +13,7 @@ public final class App {
     /**
      * Lancement de l'application.
      *
-     * @param args
+     * @param args les arguments
      *
      */
     public static void main(final String[] args) {

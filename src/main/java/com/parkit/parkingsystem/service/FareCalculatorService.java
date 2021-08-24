@@ -4,6 +4,10 @@ import com.parkit.parkingsystem.constants.Fare;
 import com.parkit.parkingsystem.model.Ticket;
 
 public class FareCalculatorService {
+    /**
+     * Calcul du tarif.
+     * @param ticket
+     */
     public void calculateFare(final Ticket ticket) {
         if ((ticket.getOutTime() == null)
         || (ticket.getOutTime().before(ticket.getInTime()))) {
@@ -15,7 +19,7 @@ public class FareCalculatorService {
         int inHour = ticket.getInTime().getHours();
         int outHour = ticket.getOutTime().getHours();
 
-        //TODO: Some tests are failing here.
+        // Some tests are failing here.
         // Need to check if this logic is correct
         int duration = outHour - inHour;
 

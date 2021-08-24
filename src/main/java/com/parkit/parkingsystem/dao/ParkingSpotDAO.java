@@ -12,10 +12,21 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 public class ParkingSpotDAO {
+    /**
+     * Initialisation du logger.
+     */
     private static final Logger LOGGER = LogManager.getLogger("ParkingSpotDAO");
 
+    /**
+     * Connection à la base de données.
+     */
     public DataBaseConfig dataBaseConfig = new DataBaseConfig();
 
+    /**
+     * Récupère la prochaine place disponible.
+     * @param parkingType
+     * @return result la prochaine place disponible
+     */
     public int getNextAvailableSlot(final ParkingType parkingType) {
         Connection con = null;
         int result = -1;
@@ -38,6 +49,11 @@ public class ParkingSpotDAO {
         return result;
     }
 
+    /**
+     * Met à jour la disponibilité de la place.
+     * @param parkingSpot
+     * @return updateRowCount à 1, la place n'est donc plus disponible
+     */
     public boolean updateParking(final ParkingSpot parkingSpot) {
         //update the availability fo that parking slot
         Connection con = null;

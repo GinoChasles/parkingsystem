@@ -1,19 +1,36 @@
 package com.parkit.parkingsystem.constants;
 
 public final class DBConstants {
-
+    /**
+     * requête SQL pour afficher les places disponibles.
+     */
     public static final String GET_NEXT_PARKING_SPOT =
             "select min(PARKING_NUMBER) from parking "
                     + "where AVAILABLE = true and TYPE = ?";
+
+    /**
+     * requête SQL pour mettre à jour une place de parking utilisée.
+     */
     public static final String UPDATE_PARKING_SPOT =
             "update parking set available = ? where PARKING_NUMBER = ?";
 
+    /**
+     * requête SQL pour sauvegarder un ticket.
+     */
     public static final String SAVE_TICKET =
             "insert into ticket(PARKING_NUMBER, "
                     + "VEHICLE_REG_NUMBER, PRICE,"
                     + " IN_TIME, OUT_TIME) values(?,?,?,?,?)";
+
+    /**
+     * requête SQL pour mettre à jour le prix d'un ticket.
+     */
     public static final String UPDATE_TICKET =
             "update ticket set PRICE=?, OUT_TIME=? where ID=?";
+
+    /**
+     * requête SQL pour obtenir le ticket.
+     */
     public static final String GET_TICKET =
             "select t.PARKING_NUMBER, t.ID, t.PRICE, "
                     + "t.IN_TIME, t.OUT_TIME, p.TYPE from ticket t,"

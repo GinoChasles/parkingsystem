@@ -6,13 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="3e486320-dbfe-4146-b7ea-d06be40349d3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parking-system.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/parkit/parkingsystem/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/parkit/parkingsystem/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/parkit/parkingsystem/config/DataBaseConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/parkit/parkingsystem/config/DataBaseConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/parkit/parkingsystem/constants/DBConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/parkit/parkingsystem/constants/DBConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/parkit/parkingsystem/constants/Fare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/parkit/parkingsystem/constants/Fare.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/parkit/parkingsystem/model/ParkingSpot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/parkit/parkingsystem/model/ParkingSpot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/parkit/parkingsystem/service/FareCalculatorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/parkit/parkingsystem/service/FareCalculatorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/parkit/parkingsystem/service/InteractiveShell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/parkit/parkingsystem/service/InteractiveShell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/parkit/parkingsystem/service/ParkingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/parkit/parkingsystem/service/ParkingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/parkit/parkingsystem/util/InputReaderUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/parkit/parkingsystem/util/InputReaderUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/parkit/parkingsystem/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/parkit/parkingsystem/App.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/parkit/parkingsystem/config/DataBaseConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/parkit/parkingsystem/config/DataBaseConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/parkit/parkingsystem/constants/DBConstants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/parkit/parkingsystem/constants/DBConstants.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/parkit/parkingsystem/constants/Fare.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/parkit/parkingsystem/constants/Fare.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/parkit/parkingsystem/constants/ParkingType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/parkit/parkingsystem/constants/ParkingType.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/parkit/parkingsystem/dao/ParkingSpotDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/parkit/parkingsystem/dao/ParkingSpotDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/parkit/parkingsystem/dao/TicketDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/parkit/parkingsystem/dao/TicketDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/parkit/parkingsystem/model/ParkingSpot.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/parkit/parkingsystem/model/ParkingSpot.class" afterDir="false" />
@@ -22,11 +28,6 @@
       <change beforePath="$PROJECT_DIR$/target/classes/com/parkit/parkingsystem/service/InteractiveShell.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/parkit/parkingsystem/service/InteractiveShell.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/parkit/parkingsystem/service/ParkingService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/parkit/parkingsystem/service/ParkingService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/parkit/parkingsystem/util/InputReaderUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/parkit/parkingsystem/util/InputReaderUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/parkit/parkingsystem/FareCalculatorServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/parkit/parkingsystem/FareCalculatorServiceTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/parkit/parkingsystem/ParkingServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/parkit/parkingsystem/ParkingServiceTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/parkit/parkingsystem/integration/ParkingDataBaseIT.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/parkit/parkingsystem/integration/ParkingDataBaseIT.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/parkit/parkingsystem/integration/config/DataBaseTestConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/parkit/parkingsystem/integration/config/DataBaseTestConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/parkit/parkingsystem/integration/service/DataBasePrepareService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/parkit/parkingsystem/integration/service/DataBasePrepareService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,6 +136,7 @@
       <workItem from="1628861081813" duration="1332000" />
       <workItem from="1629445328201" duration="8128000" />
       <workItem from="1629742080388" duration="19000" />
+      <workItem from="1629806563360" duration="5316000" />
     </task>
     <servers />
   </component>

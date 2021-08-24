@@ -15,10 +15,22 @@ import java.sql.Timestamp;
 
 public class TicketDAO {
 
+    /**
+     * Initialisation logger.
+     */
     private static final Logger LOGGER = LogManager.getLogger("TicketDAO");
 
+    /**
+     * Connection à la base de données.
+     */
     public DataBaseConfig dataBaseConfig = new DataBaseConfig();
 
+    /**
+     * Sauvegarde du ticket.
+     * @param ticket
+     * @return exécution du script sql de sauvegarde de
+     * ticket dans la base de données
+     */
     public boolean saveTicket(final Ticket ticket) {
         Connection con = null;
         try {
@@ -42,6 +54,11 @@ public class TicketDAO {
         }
     }
 
+    /**
+     * Getter du ticket depuis la base de données.
+     * @param vehicleRegNumber
+     * @return le ticket
+     */
     public Ticket getTicket(final String vehicleRegNumber) {
         Connection con = null;
         Ticket ticket = null;
@@ -72,6 +89,11 @@ public class TicketDAO {
         }
     }
 
+    /**
+     * Update du ticket dans la base de donnée.
+     * @param ticket
+     * @return true si le ticket a été mis a jour
+     */
     public boolean updateTicket(final Ticket ticket) {
         Connection con = null;
         try {

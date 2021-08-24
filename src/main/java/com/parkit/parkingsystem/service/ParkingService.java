@@ -13,23 +13,48 @@ import java.util.Date;
 
 public class ParkingService {
 
+    /**
+     * Déclaration logger.
+     */
     private static final Logger LOGGER = LogManager.getLogger("ParkingService");
 
+    /**
+     * Déclaration du service de calcul de tarif.
+     */
     private static FareCalculatorService fareCalculatorService =
             new FareCalculatorService();
+    /**
+     * Déclaration du lecteur de console.
+     */
+    private final InputReaderUtil inputReaderUtil;
 
-    private InputReaderUtil inputReaderUtil;
-    private ParkingSpotDAO parkingSpotDAO;
-    private  TicketDAO ticketDAO;
+    /**
+     * Initialisation place de parking.
+     */
+    private final ParkingSpotDAO parkingSpotDAO;
 
-    public ParkingService(final InputReaderUtil inputReaderUtil,
-                          final ParkingSpotDAO parkingSpotDAO,
-                          final TicketDAO ticketDAO) {
-        this.inputReaderUtil = inputReaderUtil;
-        this.parkingSpotDAO = parkingSpotDAO;
-        this.ticketDAO = ticketDAO;
+    /**
+     * Initialisation d'un ticket.
+     */
+    private final TicketDAO ticketDAO;
+
+    /**
+     * Initialisation du service.
+     * @param inputReader
+     * @param parkingSpot
+     * @param ticket
+     */
+    public ParkingService(final InputReaderUtil inputReader,
+                          final ParkingSpotDAO parkingSpot,
+                          final TicketDAO ticket) {
+        this.inputReaderUtil = inputReader;
+        this.parkingSpotDAO = parkingSpot;
+        this.ticketDAO = ticket;
     }
 
+    /**
+     * Entrée d'un véhicule.
+     */
     public void processIncomingVehicle() {
         try {
             ParkingSpot parkingSpot = getNextParkingNumberIfAvailable();
@@ -67,6 +92,10 @@ public class ParkingService {
         return inputReaderUtil.readVehicleRegistrationNumber();
     }
 
+    /**
+     * Récupère une place de parkink s'il y a encore de la place.
+     * @return une place de parking
+     */
     public ParkingSpot getNextParkingNumberIfAvailable() {
         int parkingNumber = 0;
         ParkingSpot parkingSpot = null;
@@ -107,6 +136,9 @@ public class ParkingService {
         }
     }
 
+    /**
+     * Quitter le parking.
+     */
     public void processExitingVehicle() {
         try {
             String vehicleRegNumber = getVehichleRegNumber();

@@ -8,9 +8,15 @@ import org.apache.logging.log4j.Logger;
 
 public final class InteractiveShell {
 
+    /**
+     * Déclaration du logger.
+     */
     private static final Logger LOGGER =
             LogManager.getLogger("InteractiveShell");
 
+    /**
+     * Interface de démarrage.
+     */
     public static void loadInterface() {
         LOGGER.info("App initialized!!!");
         System.out.println("Welcome to Parking System!");

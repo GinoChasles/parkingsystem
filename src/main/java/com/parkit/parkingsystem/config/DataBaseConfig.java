@@ -12,8 +12,17 @@ import java.sql.ResultSet;
 
 public class DataBaseConfig {
 
+    /**
+     * Logger.
+     */
     private static final Logger LOGGER = LogManager.getLogger("DataBaseConfig");
 
+    /**
+     * Connection à la base de production.
+     * @return connection
+     * @throws ClassNotFoundException
+     * @throws SQLException
+     */
     public Connection getConnection()
             throws ClassNotFoundException, SQLException {
         LOGGER.info("Create DB connection");
@@ -23,6 +32,10 @@ public class DataBaseConfig {
                 System.getenv("MYSQL_USER"), System.getenv("MYSQL_PASSWORD"));
     }
 
+    /**
+     * Fermeture de la connexion.
+     * @param con
+     */
     public void closeConnection(final Connection con) {
         if (con != null) {
             try {
@@ -34,6 +47,10 @@ public class DataBaseConfig {
         }
     }
 
+    /**
+     * Fermeture de l'instruction.
+     * @param ps
+     */
     public void closePreparedStatement(final PreparedStatement ps) {
         if (ps != null) {
             try {
@@ -45,6 +62,10 @@ public class DataBaseConfig {
         }
     }
 
+    /**
+     * Fermeture des résultats.
+     * @param rs
+     */
     public void closeResultSet(final ResultSet rs) {
         if (rs != null) {
             try {

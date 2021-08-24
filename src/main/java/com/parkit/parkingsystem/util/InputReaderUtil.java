@@ -10,10 +10,20 @@ import java.util.Scanner;
  */
 public class InputReaderUtil {
 
+    /**
+     * Déclaration du scanner, entrée console.
+     */
     private static final Scanner SCAN = new Scanner(System.in);
+    /**
+     * Déclaration logger.
+     */
     private static final Logger LOGGER =
             LogManager.getLogger("InputReaderUtil");
 
+    /**
+     * méthode pour lire la valeur entrée dans la console.
+     * @return input
+     */
     public int readSelection() {
         try {
             int input = Integer.parseInt(SCAN.nextLine());
@@ -26,6 +36,11 @@ public class InputReaderUtil {
         }
     }
 
+    /**
+     * Lire la plaque d'immatriculation saisie.
+     * @return la plaque
+     * @throws Exception
+     */
     public String readVehicleRegistrationNumber() throws Exception {
         try {
             String vehicleRegNumber = SCAN.nextLine();
