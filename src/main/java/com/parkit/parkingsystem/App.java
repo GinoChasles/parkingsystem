@@ -12,7 +12,9 @@ public final class App {
 
     /**
      * Lancement de l'application.
+     *
      * @param args
+     *
      */
     public static void main(final String[] args) {
         LOGGER.info("Initializing Parking System");
