@@ -3,6 +3,7 @@ package com.parkit.parkingsystem.service;
 import com.parkit.parkingsystem.constants.Fare;
 import com.parkit.parkingsystem.model.Ticket;
 
+import java.time.Duration;
 import java.time.LocalDateTime;
 
 public class FareCalculatorService {
@@ -23,7 +24,7 @@ public class FareCalculatorService {
 
         // TODO: Some tests are failing here.
         // Need to check if this logic is correct
-        int duration = outHour.compareTo(inHour);
+        long duration = Duration.between(inHour,outHour).toHours();
 
         switch (ticket.getParkingSpot().getParkingType()) {
             case CAR:
