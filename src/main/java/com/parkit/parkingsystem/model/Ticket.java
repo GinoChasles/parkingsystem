@@ -1,7 +1,6 @@
 package com.parkit.parkingsystem.model;
 
-import java.util.Calendar;
-import java.util.Date;
+import java.time.LocalDateTime;
 
 public class Ticket {
     /**
@@ -27,12 +26,12 @@ public class Ticket {
     /**
      * Date d'arrivée du véhicule.
      */
-    private Date inTime;
+    private LocalDateTime inTime;
 
     /**
      * Date de sortie du véhicule.
      */
-    private Date outTime;
+    private LocalDateTime outTime;
 
     /**
      * Récupère l'id du ticket.
@@ -102,7 +101,7 @@ public class Ticket {
      * Getter de la date d'arrivée.
      * @return la date d'arrivée
      */
-    public Date getInTime() {
+    public LocalDateTime getInTime() {
         return inTime;
     }
 
@@ -110,7 +109,7 @@ public class Ticket {
      * Date d'entrée du véhicule.
      * @param enterTime
      */
-    public void setInTime(final Date enterTime) {
+    public void setInTime(final LocalDateTime enterTime) {
         this.inTime = enterTime;
     }
 
@@ -118,7 +117,7 @@ public class Ticket {
      * Date de sortie du véhicule.
      * @return date de sortie
      */
-    public Date getOutTime() {
+    public LocalDateTime getOutTime() {
         return outTime;
     }
 
@@ -126,7 +125,7 @@ public class Ticket {
      * Setter de la date de sortie du véhicule du parking.
      * @param quitTime
      */
-    public void setOutTime(final Date quitTime) {
+    public void setOutTime(final LocalDateTime quitTime) {
         this.outTime = quitTime;
     }
 }

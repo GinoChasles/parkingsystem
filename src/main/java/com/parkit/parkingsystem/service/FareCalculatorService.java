@@ -3,6 +3,8 @@ package com.parkit.parkingsystem.service;
 import com.parkit.parkingsystem.constants.Fare;
 import com.parkit.parkingsystem.model.Ticket;
 
+import java.time.LocalDateTime;
+
 public class FareCalculatorService {
     /**
      * Calcul du tarif.
@@ -10,18 +12,18 @@ public class FareCalculatorService {
      */
     public void calculateFare(final Ticket ticket) {
         if ((ticket.getOutTime() == null)
-        || (ticket.getOutTime().before(ticket.getInTime()))) {
+        || (ticket.getOutTime().isBefore(ticket.getInTime()))) {
             throw new IllegalArgumentException(
             "Out time provided is incorrect:"
             + ticket.getOutTime().toString());
         }
 
-        int inHour = ticket.getInTime().getHours();
-        int outHour = ticket.getOutTime().getHours();
+        LocalDateTime inHour = ticket.getInTime();
+        LocalDateTime outHour = ticket.getOutTime();
 
-        // Some tests are failing here.
+        // TODO: Some tests are failing here.
         // Need to check if this logic is correct
-        int duration = outHour - inHour;
+        int duration = inHour.compareTo(outHour);
 
         switch (ticket.getParkingSpot().getParkingType()) {
             case CAR:

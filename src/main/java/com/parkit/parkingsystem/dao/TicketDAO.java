@@ -68,10 +68,10 @@ public class TicketDAO {
             ps.setString(index2, ticket.getVehicleRegNumber());
             ps.setDouble(index3, ticket.getPrice());
             ps.setTimestamp(index4,
-                    new Timestamp(ticket.getInTime().getTime()));
+                    Timestamp.valueOf(ticket.getInTime()));
             ps.setTimestamp(index5, (ticket.getOutTime() == null)
-                    ? null : (new Timestamp(
-                            ticket.getOutTime().getTime())));
+                    ? null : (Timestamp.valueOf(
+                    ticket.getOutTime())));
             return ps.execute();
         } catch (Exception ex) {
             LOGGER.error("Error fetching next available slot", ex);
@@ -103,8 +103,8 @@ public class TicketDAO {
                 ticket.setId(rs.getInt(index2));
                 ticket.setVehicleRegNumber(vehicleRegNumber);
                 ticket.setPrice(rs.getDouble(index3));
-                ticket.setInTime(rs.getTimestamp(index4));
-                ticket.setOutTime(rs.getTimestamp(index5));
+                ticket.setInTime(rs.getTimestamp(index4).toLocalDateTime());
+                ticket.setOutTime(rs.getTimestamp(index5).toLocalDateTime());
             }
             dataBaseConfig.closeResultSet(rs);
             dataBaseConfig.closePreparedStatement(ps);
@@ -129,7 +129,7 @@ public class TicketDAO {
                     con.prepareStatement(DBConstants.UPDATE_TICKET);
             ps.setDouble(index1, ticket.getPrice());
             ps.setTimestamp(index2,
-                    new Timestamp(ticket.getOutTime().getTime()));
+                    Timestamp.valueOf(ticket.getOutTime()));
             ps.setInt(index3, ticket.getId());
             ps.execute();
             return true;

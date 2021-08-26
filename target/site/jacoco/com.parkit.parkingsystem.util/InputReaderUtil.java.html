@@ -5,33 +5,55 @@ import org.apache.logging.log4j.Logger;
 
 import java.util.Scanner;
 
-<span class="nc" id="L8">public class InputReaderUtil {</span>
+/**
+ *
+ */
+<span class="nc" id="L11">public class InputReaderUtil {</span>
 
-<span class="fc" id="L10">    private static final Scanner scan = new Scanner(System.in);</span>
-<span class="fc" id="L11">    private static final Logger logger = LogManager.getLogger(&quot;InputReaderUtil&quot;);</span>
+    /**
+     * Déclaration du scanner, entrée console.
+     */
+<span class="fc" id="L16">    private static final Scanner SCAN = new Scanner(System.in);</span>
+    /**
+     * Déclaration logger.
+     */
+<span class="fc" id="L20">    private static final Logger LOGGER =</span>
+<span class="fc" id="L21">            LogManager.getLogger(&quot;InputReaderUtil&quot;);</span>
 
+    /**
+     * méthode pour lire la valeur entrée dans la console.
+     * @return input
+     */
     public int readSelection() {
         try {
-<span class="nc" id="L15">            int input = Integer.parseInt(scan.nextLine());</span>
-<span class="nc" id="L16">            return input;</span>
-<span class="nc" id="L17">        } catch (Exception e) {</span>
-<span class="nc" id="L18">            logger.error(&quot;Error while reading user input from Shell&quot;, e);</span>
-<span class="nc" id="L19">            System.out.println(&quot;Error reading input. Please enter valid number for proceeding further&quot;);</span>
-<span class="nc" id="L20">            return -1;</span>
+<span class="nc" id="L29">            int input = Integer.parseInt(SCAN.nextLine());</span>
+<span class="nc" id="L30">            return input;</span>
+<span class="nc" id="L31">        } catch (Exception e) {</span>
+<span class="nc" id="L32">            LOGGER.error(&quot;Error while reading user input from Shell&quot;, e);</span>
+<span class="nc" id="L33">            System.out.println(&quot;Error reading input. &quot;</span>
+                    + &quot;Please enter valid number for proceeding further&quot;);
+<span class="nc" id="L35">            return -1;</span>
         }
     }
 
+    /**
+     * Lire la plaque d'immatriculation saisie.
+     * @return la plaque
+     * @throws Exception
+     */
     public String readVehicleRegistrationNumber() throws Exception {
         try {
-<span class="nc" id="L26">            String vehicleRegNumber = scan.nextLine();</span>
-<span class="nc bnc" id="L27" title="All 4 branches missed.">            if (vehicleRegNumber == null || vehicleRegNumber.trim().length() == 0) {</span>
-<span class="nc" id="L28">                throw new IllegalArgumentException(&quot;Invalid input provided&quot;);</span>
+<span class="nc" id="L46">            String vehicleRegNumber = SCAN.nextLine();</span>
+<span class="nc bnc" id="L47" title="All 2 branches missed.">            if (vehicleRegNumber == null</span>
+<span class="nc bnc" id="L48" title="All 2 branches missed.">                    || vehicleRegNumber.trim().length() == 0) {</span>
+<span class="nc" id="L49">                throw new IllegalArgumentException(&quot;Invalid input provided&quot;);</span>
             }
-<span class="nc" id="L30">            return vehicleRegNumber;</span>
-<span class="nc" id="L31">        } catch (Exception e) {</span>
-<span class="nc" id="L32">            logger.error(&quot;Error while reading user input from Shell&quot;, e);</span>
-<span class="nc" id="L33">            System.out.println(&quot;Error reading input. Please enter a valid string for vehicle registration number&quot;);</span>
-<span class="nc" id="L34">            throw e;</span>
+<span class="nc" id="L51">            return vehicleRegNumber;</span>
+<span class="nc" id="L52">        } catch (Exception e) {</span>
+<span class="nc" id="L53">            LOGGER.error(&quot;Error while reading user input from Shell&quot;, e);</span>
+<span class="nc" id="L54">            System.out.println(&quot;Error reading input. Please enter a&quot;</span>
+                    + &quot; valid string for vehicle registration number&quot;);
+<span class="nc" id="L56">            throw e;</span>
         }
     }
 
