@@ -10,7 +10,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.time.LocalDateTime;
-import java.util.Date;
 
 public class ParkingService {
 
@@ -67,7 +66,7 @@ public class ParkingService {
 
 
                 Ticket ticket = new Ticket();
-                LocalDateTime inTime = ticket.getInTime();
+                LocalDateTime inTime = LocalDateTime.now();
                 //ID, PARKING_NUMBER, VEHICLE_REG_NUMBER,
                 // PRICE, IN_TIME, OUT_TIME)
                 //ticket.setId(ticketID);
@@ -143,7 +142,7 @@ public class ParkingService {
         try {
             String vehicleRegNumber = getVehichleRegNumber();
             Ticket ticket = ticketDAO.getTicket(vehicleRegNumber);
-            LocalDateTime outTime = ticket.getOutTime();
+            LocalDateTime outTime = LocalDateTime.now();
             ticket.setOutTime(outTime);
             fareCalculatorService.calculateFare(ticket);
             if (ticketDAO.updateTicket(ticket)) {

@@ -31,9 +31,8 @@ public class FareCalculatorServiceTest {
 
     @Test
     public void calculateFareCar() {
-        LocalDateTime inTime = ticket.getInTime();
-        LocalDateTime outTime = ticket.getOutTime();
-        inTime.minusHours(1);
+        LocalDateTime inTime = LocalDateTime.now();
+        LocalDateTime outTime = inTime.plusHours(1);
         ParkingSpot parkingSpot = new ParkingSpot(1, ParkingType.CAR,false);
 
         ticket.setInTime(inTime);
@@ -46,7 +45,7 @@ public class FareCalculatorServiceTest {
     @Test
     public void calculateFareBike() {
         LocalDateTime inTime = LocalDateTime.now();
-        LocalDateTime outTime = inTime.minusHours(1);
+        LocalDateTime outTime = inTime.plusHours(1);
         ParkingSpot parkingSpot = new ParkingSpot(1, ParkingType.BIKE,false);
 
         ticket.setInTime(inTime);
@@ -58,9 +57,8 @@ public class FareCalculatorServiceTest {
 
     @Test
     public void calculateFareUnkownType() {
-        LocalDateTime inTime = ticket.getInTime();
-        inTime.minusHours(1);
-        LocalDateTime outTime = ticket.getOutTime();
+        LocalDateTime inTime = LocalDateTime.now();
+        LocalDateTime outTime = inTime.plusHours(1);
         ParkingSpot parkingSpot = new ParkingSpot(1, null,false);
 
         ticket.setInTime(inTime);
@@ -71,9 +69,8 @@ public class FareCalculatorServiceTest {
 
     @Test
     public void calculateFareBikeWithFutureInTime() {
-        LocalDateTime inTime = ticket.getInTime();
-        inTime.minusHours(1);
-        LocalDateTime outTime = ticket.getOutTime();
+        LocalDateTime inTime = LocalDateTime.now();
+        LocalDateTime outTime = inTime.plusHours(1);
         ParkingSpot parkingSpot = new ParkingSpot(1, ParkingType.BIKE,false);
 
         ticket.setInTime(inTime);
@@ -84,9 +81,8 @@ public class FareCalculatorServiceTest {
 
     @Test
     public void calculateFareBikeWithLessThanOneHourParkingTime() {
-        LocalDateTime inTime = ticket.getInTime();
-        inTime.minusMinutes(45);//45 minutes parking time should give 3/4th parking fare
-        LocalDateTime outTime = ticket.getOutTime();
+        LocalDateTime inTime = LocalDateTime.now();
+        LocalDateTime outTime = inTime.plusMinutes(45);//45 minutes parking time should give 3/4th parking fare
         ParkingSpot parkingSpot = new ParkingSpot(1, ParkingType.BIKE,false);
 
         ticket.setInTime(inTime);
@@ -98,9 +94,8 @@ public class FareCalculatorServiceTest {
 
     @Test
     public void calculateFareCarWithLessThanOneHourParkingTime() {
-        LocalDateTime inTime = ticket.getInTime();
-        inTime.minusMinutes(45);//45 minutes parking time should give 3/4th parking fare
-        LocalDateTime outTime = ticket.getOutTime();
+        LocalDateTime inTime = LocalDateTime.now();
+        LocalDateTime outTime = inTime.plusMinutes(45);//45 minutes parking time should give 3/4th parking fare
         ParkingSpot parkingSpot = new ParkingSpot(1, ParkingType.CAR,false);
 
         ticket.setInTime(inTime);
@@ -112,9 +107,8 @@ public class FareCalculatorServiceTest {
 
     @Test
     public void calculateFareCarWithMoreThanADayParkingTime() {
-        LocalDateTime inTime = ticket.getInTime();
-        inTime.minusDays(1);//24 hours parking time should give 24 * parking fare per hour
-        LocalDateTime outTime = ticket.getOutTime();
+        LocalDateTime inTime = LocalDateTime.now();
+        LocalDateTime outTime = inTime.plusDays(1);//24 hours parking time should give 24 * parking fare per hour
         ParkingSpot parkingSpot = new ParkingSpot(1, ParkingType.CAR,false);
 
         ticket.setInTime(inTime);
