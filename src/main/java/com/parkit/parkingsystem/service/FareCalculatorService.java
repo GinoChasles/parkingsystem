@@ -23,7 +23,7 @@ public class FareCalculatorService {
 
         // TODO: Some tests are failing here.
         // Need to check if this logic is correct
-        int duration = inHour.compareTo(outHour);
+        int duration = outHour.compareTo(inHour);
 
         switch (ticket.getParkingSpot().getParkingType()) {
             case CAR:
