@@ -7,6 +7,18 @@ import java.time.Duration;
 import java.time.LocalDateTime;
 
 public class FareCalculatorService {
+
+    /**
+     * Constante définissant à partir de quand
+     * le parking n'est plus gratuit, exprimé en heure.
+     */
+    private final double delayFree = 0.5;
+
+    /**
+     * Constante une heure correspond à 60minutes.
+     */
+    private final double hourInMinutes = 60;
+
     /**
      * Calcul du tarif.
      * @param ticket
@@ -21,12 +33,10 @@ public class FareCalculatorService {
 
         LocalDateTime inHour = ticket.getInTime();
         LocalDateTime outHour = ticket.getOutTime();
+        double duration = (double) Duration.between(
+                inHour, outHour).toMinutes() / hourInMinutes;
 
-        // TODO: Some tests are failing here.
-        // Need to check if this logic is correct
-        double duration = (double)Duration.between(inHour,outHour).toMinutes()/60;
-
-        if (duration <= 0.5) {
+        if (duration <= delayFree) {
             ticket.setPrice(0.0);
         } else {
             switch (ticket.getParkingSpot().getParkingType()) {
