@@ -24,6 +24,10 @@ public class Ticket {
     private double price;
 
     /**
+     * Réduction de tarif.
+     */
+    private int discount;
+    /**
      * Date d'arrivée du véhicule.
      */
     private LocalDateTime inTime;
@@ -95,6 +99,22 @@ public class Ticket {
      */
     public void setPrice(final double priceTicket) {
         this.price = priceTicket;
+    }
+
+    /**
+     * Getter de la réduction de tarif.
+     * @return
+     */
+    public int getDiscount() {
+        return discount;
+    }
+
+    /**
+     * Setter de la réduction de tarif.
+     * @param discountTicket
+     */
+    public void setDiscount(final int discountTicket) {
+        this.discount = discountTicket;
     }
 
     /**

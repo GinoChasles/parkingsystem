@@ -121,7 +121,7 @@ public class FareCalculatorServiceTest {
     @Test
     public void calculateFareCarWithLessOfThirtyMinutes() {
         LocalDateTime inTime = LocalDateTime.now();
-        LocalDateTime outTime = inTime.plusMinutes(30);//24 hours parking time should give 24 * parking fare per hour
+        LocalDateTime outTime = inTime.plusMinutes(30);
         ParkingSpot parkingSpot = new ParkingSpot(1, ParkingType.CAR,false);
 
         ticket.setInTime(inTime);
@@ -133,7 +133,7 @@ public class FareCalculatorServiceTest {
     @Test
     public void calculateFareBikeWithLessOfThirtyMinutes() {
         LocalDateTime inTime = LocalDateTime.now();
-        LocalDateTime outTime = inTime.plusMinutes(30);//24 hours parking time should give 24 * parking fare per hour
+        LocalDateTime outTime = inTime.plusMinutes(30);
         ParkingSpot parkingSpot = new ParkingSpot(1, ParkingType.BIKE,false);
 
         ticket.setInTime(inTime);
@@ -141,5 +141,34 @@ public class FareCalculatorServiceTest {
         ticket.setParkingSpot(parkingSpot);
         fareCalculatorService.calculateFare(ticket);
         assertEquals( 0 , ticket.getPrice());
+    }
+    @Test
+    public void calculateCarWithFivePourcentDiscount() {
+        LocalDateTime inTime = LocalDateTime.now();
+        LocalDateTime outTime = inTime.plusHours(1);
+        ParkingSpot parkingSpot = new ParkingSpot(1, ParkingType.CAR,false);
+
+        ticket.setVehicleRegNumber("AA123AA");
+        ticket.setInTime(inTime);
+        ticket.setOutTime(outTime);
+        ticket.setParkingSpot(parkingSpot);
+        ticket.setDiscount(5);
+        fareCalculatorService.calculateFare(ticket);
+        assertEquals( ticket.getPrice() - (ticket.getDiscount() * Fare.CAR_RATE_PER_HOUR / 100) , Fare.CAR_RATE_PER_HOUR - (5 * Fare.CAR_RATE_PER_HOUR / 100));
+    }
+    @Test
+    public void calculateBikeWithFivePourcentDiscount() {
+        LocalDateTime inTime = LocalDateTime.now();
+        LocalDateTime outTime = inTime.plusHours(1);
+        ParkingSpot parkingSpot = new ParkingSpot(1, ParkingType.BIKE,false);
+
+        ticket.setVehicleRegNumber("AA123AA");
+        ticket.setDiscount(5);
+
+        ticket.setInTime(inTime);
+        ticket.setOutTime(outTime);
+        ticket.setParkingSpot(parkingSpot);
+        fareCalculatorService.calculateFare(ticket);
+        assertEquals( ticket.getPrice() - (ticket.getDiscount() * Fare.BIKE_RATE_PER_HOUR / 100), Fare.BIKE_RATE_PER_HOUR - (5 * Fare.BIKE_RATE_PER_HOUR / 100));
     }
 }

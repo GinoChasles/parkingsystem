@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Ticket.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">parking-system</a> &gt; <a href="index.source.html" class="el_package">com.parkit.parkingsystem.model</a> &gt; <span class="el_source">Ticket.java</span></div><h1>Ticket.java</h1><pre class="source lang-java linenums">package com.parkit.parkingsystem.model;
 
-import java.util.Calendar;
-import java.util.Date;
+import java.time.LocalDateTime;
 
-<span class="fc" id="L6">public class Ticket {</span>
+<span class="fc" id="L5">public class Ticket {</span>
     /**
      * id du ticket.
      */
@@ -27,19 +26,19 @@ import java.util.Date;
     /**
      * Date d'arrivée du véhicule.
      */
-    private Date inTime;
+    private LocalDateTime inTime;
 
     /**
      * Date de sortie du véhicule.
      */
-    private Date outTime;
+    private LocalDateTime outTime;
 
     /**
      * Récupère l'id du ticket.
      * @return id
      */
     public int getId() {
-<span class="nc" id="L42">        return id;</span>
+<span class="nc" id="L41">        return id;</span>
     }
 
     /**
@@ -47,15 +46,15 @@ import java.util.Date;
      * @param idTicket
      */
     public void setId(final int idTicket) {
-<span class="nc" id="L50">        this.id = idTicket;</span>
-<span class="nc" id="L51">    }</span>
+<span class="nc" id="L49">        this.id = idTicket;</span>
+<span class="nc" id="L50">    }</span>
 
     /**
      * Getter de la place de parking.
      * @return place de parking
      */
     public ParkingSpot getParkingSpot() {
-<span class="fc" id="L58">        return parkingSpot;</span>
+<span class="fc" id="L57">        return parkingSpot;</span>
     }
 
     /**
@@ -63,15 +62,15 @@ import java.util.Date;
      * @param vehiculeSpot
      */
     public void setParkingSpot(final ParkingSpot vehiculeSpot) {
-<span class="fc" id="L66">        this.parkingSpot = vehiculeSpot;</span>
-<span class="fc" id="L67">    }</span>
+<span class="fc" id="L65">        this.parkingSpot = vehiculeSpot;</span>
+<span class="fc" id="L66">    }</span>
 
     /**
      * Getter de la plaque d'immatriculation du véhicule.
      * @return la plaque d'immatriculation
      */
     public String getVehicleRegNumber() {
-<span class="fc" id="L74">        return vehicleRegNumber;</span>
+<span class="nc" id="L73">        return vehicleRegNumber;</span>
     }
 
     /**
@@ -79,15 +78,15 @@ import java.util.Date;
      * @param vehicleNumber
      */
     public void setVehicleRegNumber(final String vehicleNumber) {
-<span class="fc" id="L82">        this.vehicleRegNumber = vehicleNumber;</span>
-<span class="fc" id="L83">    }</span>
+<span class="fc" id="L81">        this.vehicleRegNumber = vehicleNumber;</span>
+<span class="fc" id="L82">    }</span>
 
     /**
      * Getter du prix du ticket.
      * @return le prix
      */
     public double getPrice() {
-<span class="fc" id="L90">        return price;</span>
+<span class="fc" id="L89">        return price;</span>
     }
 
     /**
@@ -95,39 +94,39 @@ import java.util.Date;
      * @param priceTicket
      */
     public void setPrice(final double priceTicket) {
-<span class="fc" id="L98">        this.price = priceTicket;</span>
-<span class="fc" id="L99">    }</span>
+<span class="fc" id="L97">        this.price = priceTicket;</span>
+<span class="fc" id="L98">    }</span>
 
     /**
      * Getter de la date d'arrivée.
      * @return la date d'arrivée
      */
-    public Date getInTime() {
-<span class="fc" id="L106">        return inTime;</span>
+    public LocalDateTime getInTime() {
+<span class="fc" id="L105">        return inTime;</span>
     }
 
     /**
      * Date d'entrée du véhicule.
      * @param enterTime
      */
-    public void setInTime(final Date enterTime) {
-<span class="fc" id="L114">        this.inTime = enterTime;</span>
-<span class="fc" id="L115">    }</span>
+    public void setInTime(final LocalDateTime enterTime) {
+<span class="fc" id="L113">        this.inTime = enterTime;</span>
+<span class="fc" id="L114">    }</span>
 
     /**
      * Date de sortie du véhicule.
      * @return date de sortie
      */
-    public Date getOutTime() {
-<span class="fc" id="L122">        return outTime;</span>
+    public LocalDateTime getOutTime() {
+<span class="fc" id="L121">        return outTime;</span>
     }
 
     /**
      * Setter de la date de sortie du véhicule du parking.
      * @param quitTime
      */
-    public void setOutTime(final Date quitTime) {
-<span class="fc" id="L130">        this.outTime = quitTime;</span>
-<span class="fc" id="L131">    }</span>
+    public void setOutTime(final LocalDateTime quitTime) {
+<span class="fc" id="L129">        this.outTime = quitTime;</span>
+<span class="fc" id="L130">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

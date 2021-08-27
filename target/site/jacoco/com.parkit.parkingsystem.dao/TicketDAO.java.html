@@ -68,10 +68,10 @@ import java.sql.Timestamp;
 <span class="nc" id="L68">            ps.setString(index2, ticket.getVehicleRegNumber());</span>
 <span class="nc" id="L69">            ps.setDouble(index3, ticket.getPrice());</span>
 <span class="nc" id="L70">            ps.setTimestamp(index4,</span>
-<span class="nc" id="L71">                    new Timestamp(ticket.getInTime().getTime()));</span>
+<span class="nc" id="L71">                    Timestamp.valueOf(ticket.getInTime()));</span>
 <span class="nc bnc" id="L72" title="All 2 branches missed.">            ps.setTimestamp(index5, (ticket.getOutTime() == null)</span>
-<span class="nc" id="L73">                    ? null : (new Timestamp(</span>
-<span class="nc" id="L74">                            ticket.getOutTime().getTime())));</span>
+<span class="nc" id="L73">                    ? null : (Timestamp.valueOf(</span>
+<span class="nc" id="L74">                    ticket.getOutTime())));</span>
 <span class="nc" id="L75">            return ps.execute();</span>
 <span class="nc" id="L76">        } catch (Exception ex) {</span>
 <span class="nc" id="L77">            LOGGER.error(&quot;Error fetching next available slot&quot;, ex);</span>
@@ -103,8 +103,8 @@ import java.sql.Timestamp;
 <span class="nc" id="L103">                ticket.setId(rs.getInt(index2));</span>
 <span class="nc" id="L104">                ticket.setVehicleRegNumber(vehicleRegNumber);</span>
 <span class="nc" id="L105">                ticket.setPrice(rs.getDouble(index3));</span>
-<span class="nc" id="L106">                ticket.setInTime(rs.getTimestamp(index4));</span>
-<span class="nc" id="L107">                ticket.setOutTime(rs.getTimestamp(index5));</span>
+<span class="nc" id="L106">                ticket.setInTime(rs.getTimestamp(index4).toLocalDateTime());</span>
+<span class="nc" id="L107">                ticket.setOutTime(rs.getTimestamp(index5).toLocalDateTime());</span>
             }
 <span class="nc" id="L109">            dataBaseConfig.closeResultSet(rs);</span>
 <span class="nc" id="L110">            dataBaseConfig.closePreparedStatement(ps);</span>
@@ -129,7 +129,7 @@ import java.sql.Timestamp;
 <span class="nc" id="L129">                    con.prepareStatement(DBConstants.UPDATE_TICKET);</span>
 <span class="nc" id="L130">            ps.setDouble(index1, ticket.getPrice());</span>
 <span class="nc" id="L131">            ps.setTimestamp(index2,</span>
-<span class="nc" id="L132">                    new Timestamp(ticket.getOutTime().getTime()));</span>
+<span class="nc" id="L132">                    Timestamp.valueOf(ticket.getOutTime()));</span>
 <span class="nc" id="L133">            ps.setInt(index3, ticket.getId());</span>
 <span class="nc" id="L134">            ps.execute();</span>
 <span class="nc" id="L135">            return true;</span>
