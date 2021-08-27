@@ -24,7 +24,10 @@ public class FareCalculatorService {
 
         // TODO: Some tests are failing here.
         // Need to check if this logic is correct
-        long duration = Duration.between(inHour,outHour).toHours();
+//        long durationMillis = Duration.between(inHour,outHour).toMillis();
+//        long duration = Duration.between(inHour,outHour).toHours();
+        double duration = (double)Duration.between(inHour,outHour).toMinutes()/60;
+//        long duration = durationMillis /60/60/1000;
 
         switch (ticket.getParkingSpot().getParkingType()) {
             case CAR:
