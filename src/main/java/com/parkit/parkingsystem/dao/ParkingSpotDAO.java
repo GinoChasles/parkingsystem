@@ -74,10 +74,18 @@ public class ParkingSpotDAO {
         }
     }
 
+    /**
+     * Getter de la config.
+     * @return config
+     */
     public DataBaseConfig getDataBaseConfig() {
         return dataBaseConfig;
     }
 
+    /**
+     * Setter config.
+     * @param dataBase
+     */
     public void setDataBaseConfig(final DataBaseConfig dataBase) {
         this.dataBaseConfig = dataBase;
     }
