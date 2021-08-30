@@ -29,7 +29,7 @@ public class ParkingDataBaseIT {
     @BeforeAll
     private static void setUp() throws Exception{
         parkingSpotDAO = new ParkingSpotDAO();
-        parkingSpotDAO.dataBaseConfig = dataBaseTestConfig;
+        parkingSpotDAO.setDataBaseConfig(dataBaseTestConfig);
         ticketDAO = new TicketDAO();
         ticketDAO.dataBaseConfig = dataBaseTestConfig;
         dataBasePrepareService = new DataBasePrepareService();
@@ -43,19 +43,19 @@ public class ParkingDataBaseIT {
     }
 
     @AfterAll
-    private static void tearDown(){
+    private static void tearDown() {
 
     }
 
     @Test
-    public void testParkingACar(){
+    public void testParkingACar() {
         ParkingService parkingService = new ParkingService(inputReaderUtil, parkingSpotDAO, ticketDAO);
         parkingService.processIncomingVehicle();
         //TODO: check that a ticket is actualy saved in DB and Parking table is updated with availability
     }
 
     @Test
-    public void testParkingLotExit(){
+    public void testParkingLotExit() {
         testParkingACar();
         ParkingService parkingService = new ParkingService(inputReaderUtil, parkingSpotDAO, ticketDAO);
         parkingService.processExitingVehicle();
