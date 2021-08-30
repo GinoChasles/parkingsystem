@@ -51,6 +51,22 @@ public class TicketDAO {
     private final int index6 = 6;
 
     /**
+     * Getter de la config.
+     * @return config
+     */
+    public DataBaseConfig getDataBaseConfig() {
+        return dataBaseConfig;
+    }
+
+    /**
+     * Setter config.
+     * @param dataBase
+     */
+    public void setDataBaseConfig(final DataBaseConfig dataBase) {
+        this.dataBaseConfig = dataBase;
+    }
+
+    /**
      * Sauvegarde du ticket.
      * @param ticket
      * @return exécution du script sql de sauvegarde de
