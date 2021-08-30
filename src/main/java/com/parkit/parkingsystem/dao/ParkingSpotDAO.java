@@ -20,7 +20,7 @@ public class ParkingSpotDAO {
     /**
      * Connection à la base de données.
      */
-    public DataBaseConfig dataBaseConfig = new DataBaseConfig();
+    private DataBaseConfig dataBaseConfig = new DataBaseConfig();
 
     /**
      * Récupère la prochaine place disponible.
@@ -74,4 +74,11 @@ public class ParkingSpotDAO {
         }
     }
 
+    public DataBaseConfig getDataBaseConfig() {
+        return dataBaseConfig;
+    }
+
+    public void setDataBaseConfig(final DataBaseConfig dataBase) {
+        this.dataBaseConfig = dataBase;
+    }
 }

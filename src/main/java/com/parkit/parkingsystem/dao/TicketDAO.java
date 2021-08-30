@@ -23,7 +23,7 @@ public class TicketDAO {
     /**
      * Connection à la base de données.
      */
-    public DataBaseConfig dataBaseConfig = new DataBaseConfig();
+    private DataBaseConfig dataBaseConfig = new DataBaseConfig();
 
     /**
      * Déclaration d'une constante d'index 1.

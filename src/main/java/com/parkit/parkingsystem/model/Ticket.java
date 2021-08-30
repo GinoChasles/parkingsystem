@@ -103,7 +103,7 @@ public class Ticket {
 
     /**
      * Getter de la réduction de tarif.
-     * @return
+     * @return discount
      */
     public int getDiscount() {
         return discount;
