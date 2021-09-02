@@ -38,6 +38,14 @@ public final class DBConstants {
                     + "t.parking_number and t.VEHICLE_REG_NUMBER="
                     + "? order by t.IN_TIME  limit 1";
 
+    /**
+     * requête SQL pour vérifier si la plaque
+     * du véhicule est déjà enregistré dans la bdd.
+     */
+    public static final String CHECK_REGNUMBER =
+            "select count(*) from ticket where"
+                    + " ticket.VEHICLE_REG_NUMBER = ? ";
+
     private DBConstants() {
     }
 }
