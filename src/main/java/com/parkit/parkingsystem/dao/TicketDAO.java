@@ -12,6 +12,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
 public class TicketDAO {
 
@@ -119,8 +120,11 @@ public class TicketDAO {
                 ticket.setId(rs.getInt(INDEX_2));
                 ticket.setVehicleRegNumber(vehicleRegNumber);
                 ticket.setPrice(rs.getDouble(INDEX_3));
-                ticket.setInTime(rs.getTimestamp(INDEX_4).toLocalDateTime());
-                ticket.setOutTime(rs.getTimestamp(INDEX_5).toLocalDateTime());
+                ticket.setInTime(rs.getObject(INDEX_4, LocalDateTime.class));
+                ticket.setOutTime(rs.getObject(INDEX_5, LocalDateTime.class));
+//TODO uderstand why generated error
+//                ticket.setInTime(rs.getTimestamp(INDEX_4).toLocalDateTime());
+//                ticket.setOutTime(rs.getTimestamp(INDEX_5).toLocalDateTime());
             }
             dataBaseConfig.closeResultSet(rs);
             dataBaseConfig.closePreparedStatement(ps);
