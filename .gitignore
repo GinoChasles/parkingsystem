@@ -4,6 +4,7 @@
 .settings/
 bin/
 .metadata/
+.metadata/.plugins/
 
 # Intellij
 .idea/
