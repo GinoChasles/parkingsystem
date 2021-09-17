@@ -12,9 +12,9 @@
       <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
-      <excludeFolder url="file://$MODULE_DIR$/target" />
       <excludeFolder url="file://$MODULE_DIR$/.metadata/.plugins/org.eclipse.wildwebdeveloper.embedder.node/node-v14.15.4-win-x64/node_modules/npm/node_modules/are-we-there-yet/node_modules/readable-stream/doc" />
       <excludeFolder url="file://$MODULE_DIR$/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -89,7 +89,6 @@
     <orderEntry type="library" name="Maven: org.ow2.asm:asm-commons:7.2" level="project" />
     <orderEntry type="library" name="Maven: org.ow2.asm:asm-analysis:7.2" level="project" />
     <orderEntry type="library" name="Maven: org.ow2.asm:asm-tree:7.2" level="project" />
-    <orderEntry type="library" name="Maven: org.jacoco:org.jacoco.report:0.8.5" level="project" />
     <orderEntry type="library" name="Maven: org.apache.maven.plugins:maven-assembly-plugin:3.0.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.maven:maven-artifact:3.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.maven:maven-model:3.0" level="project" />
@@ -113,5 +112,6 @@
     <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.6" level="project" />
     <orderEntry type="library" name="Maven: com.github.spotbugs:spotbugs-annotations:4.4.1" level="project" />
     <orderEntry type="library" name="Maven: com.google.code.findbugs:jsr305:3.0.2" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.jacoco:org.jacoco.report:0.8.7" level="project" />
   </component>
 </module>

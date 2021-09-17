@@ -153,7 +153,7 @@ public class TicketDao {
       dataBaseConfig.closeResultSet(rs);
       dataBaseConfig.closePreparedStatement(ps);
     } catch (Exception ex) {
-      LOGGER.error("Error fetching next available slot", ex);
+      LOGGER.error("Error fetching ticket", ex);
     } finally {
       dataBaseConfig.closeConnection(con);
       return ticket;

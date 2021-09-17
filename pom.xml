@@ -65,6 +65,12 @@
             <version>RELEASE</version>
             <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>org.jacoco</groupId>
+            <artifactId>org.jacoco.report</artifactId>
+            <version>0.8.7</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -111,6 +117,7 @@
                     </dependency>
                 </dependencies>
                 <configuration>
+                    <useSystemClassLoader>false</useSystemClassLoader>
                     <excludes>
                         <exclude>**/*IT.java</exclude>
                     </excludes>
@@ -137,6 +144,16 @@
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.8.5</version>
+                <configuration>
+<!--                    <excludes>-->
+<!--                        <exclude>com/parkit/parkingsystem/config/**</exclude>-->
+<!--                        <exclude>com/parkit/parkingsystem/model/**</exclude>-->
+<!--                        <exclude>com/parkit/parkingsystem/util/**</exclude>-->
+<!--&lt;!&ndash;                        <exclude>com/parkit/parkingsystem/dao/**</exclude>&ndash;&gt;-->
+<!--                        <exclude>com/parkit/parkingsystem/App.class</exclude>-->
+<!--                        <exclude>com/parkit/parkingsystem/service/InteractiveShell.class</exclude>-->
+<!--                    </excludes>-->
+                </configuration>
                 <executions>
                     <execution>
                         <goals>
