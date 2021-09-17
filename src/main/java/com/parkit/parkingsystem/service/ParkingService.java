@@ -157,8 +157,8 @@ public class ParkingService {
     try {
       String vehicleRegNumber = getVehichleRegNumber();
       Ticket ticket = ticketDao.getTicket(vehicleRegNumber);
-      //          Date outTime = new Date();
       Date outTime = new Date();
+      //Date outTime = new Date(ticket.getInTime().getTime() + new Date(1000*7652).getTime());
       if (outTime.before(ticket.getInTime())
             || outTime.equals(ticket.getInTime())) {
         outTime = new Date(ticket.getInTime().getTime()
@@ -171,7 +171,7 @@ public class ParkingService {
         parkingSpot.setAvailable(true);
         parkingSpotDao.updateParking(parkingSpot);
         System.out.println("Please pay the parking fare:"
-                 + ticket.getPrice());
+                 + (double)Math.round(ticket.getPrice()*100.0)/100.0);
         System.out.println("Recorded out-time for vehicle number:"
                  + ticket.getVehicleRegNumber() + " is:" + outTime);
       } else {

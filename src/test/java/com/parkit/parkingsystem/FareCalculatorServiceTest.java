@@ -43,9 +43,6 @@ public class FareCalculatorServiceTest {
         Date inTime = new Date();
         Date outTime = new Date(inTime.getTime() + hour.getTime());
 
-        System.out.println(inTime);
-        System.out.println(outTime);
-
         ParkingSpot parkingSpot = new ParkingSpot(1, ParkingType.CAR,false);
 
         ticket.setInTime(inTime);
