@@ -1,0 +1,902 @@
+!SESSION 2021-09-13 09:26:32.029 -----------------------------------------------
+eclipse.buildId=4.11.0.202106180608
+java.version=16.0.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_FR
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.jface 2 0 2021-09-13 09:27:11.365
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-09-13 09:27:11.365
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@27575bcd,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@21ed4a51,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.mylyn.tasks.ui 2 0 2021-09-13 09:27:24.493
+!MESSAGE No search provider was registered. Tasks search is not available.
+
+!ENTRY org.eclipse.egit.ui 2 0 2021-09-13 09:27:27.845
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Gino'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.tigris.subversion.subclipse.core 4 368 2021-09-13 09:28:41.757
+!MESSAGE Resource '/arioflow-gateway/target/classes/META-INF/maven/io.arioflow/arioflow-gateway' does not exist.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException(/arioflow-gateway/target/classes/META-INF/maven/io.arioflow/arioflow-gateway)[368]: java.lang.Exception: Resource '/arioflow-gateway/target/classes/META-INF/maven/io.arioflow/arioflow-gateway' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:330)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:204)
+	at org.eclipse.core.internal.resources.Synchronizer.setSyncInfo(Synchronizer.java:245)
+	at org.tigris.subversion.subclipse.core.status.SynchronizerSyncInfoCache$SyncInfoSynchronizedAccessor.flushPendingCacheWrites(SynchronizerSyncInfoCache.java:243)
+	at org.tigris.subversion.subclipse.core.status.SynchronizerSyncInfoCache$1.run(SynchronizerSyncInfoCache.java:188)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2333)
+	at org.tigris.subversion.subclipse.core.status.SynchronizerSyncInfoCache.flushPendingStatuses(SynchronizerSyncInfoCache.java:185)
+	at org.tigris.subversion.subclipse.core.status.StatusCacheManager.resourceChanged(StatusCacheManager.java:408)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:305)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:295)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:158)
+	at org.eclipse.core.internal.resources.Workspace.broadcastBuildEvent(Workspace.java:367)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:150)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:244)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2021-09-13 09:28:41.759
+!MESSAGE Resource '/arioflow-gateway/target/classes/META-INF/maven/io.arioflow/arioflow-gateway' does not exist.
+!STACK 0
+java.lang.Exception: Resource '/arioflow-gateway/target/classes/META-INF/maven/io.arioflow/arioflow-gateway' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:330)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:204)
+	at org.eclipse.core.internal.resources.Synchronizer.setSyncInfo(Synchronizer.java:245)
+	at org.tigris.subversion.subclipse.core.status.SynchronizerSyncInfoCache$SyncInfoSynchronizedAccessor.flushPendingCacheWrites(SynchronizerSyncInfoCache.java:243)
+	at org.tigris.subversion.subclipse.core.status.SynchronizerSyncInfoCache$1.run(SynchronizerSyncInfoCache.java:188)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2333)
+	at org.tigris.subversion.subclipse.core.status.SynchronizerSyncInfoCache.flushPendingStatuses(SynchronizerSyncInfoCache.java:185)
+	at org.tigris.subversion.subclipse.core.status.StatusCacheManager.resourceChanged(StatusCacheManager.java:408)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:305)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:295)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:158)
+	at org.eclipse.core.internal.resources.Workspace.broadcastBuildEvent(Workspace.java:367)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:150)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:244)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.tigris.subversion.subclipse.core 4 368 2021-09-13 09:28:41.783
+!MESSAGE Resource '/arioflow-gateway/target/classes/META-INF/maven/io.arioflow' does not exist.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException(/arioflow-gateway/target/classes/META-INF/maven/io.arioflow)[368]: java.lang.Exception: Resource '/arioflow-gateway/target/classes/META-INF/maven/io.arioflow' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:330)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:204)
+	at org.eclipse.core.internal.resources.Synchronizer.setSyncInfo(Synchronizer.java:245)
+	at org.tigris.subversion.subclipse.core.status.SynchronizerSyncInfoCache$SyncInfoSynchronizedAccessor.flushPendingCacheWrites(SynchronizerSyncInfoCache.java:243)
+	at org.tigris.subversion.subclipse.core.status.SynchronizerSyncInfoCache$1.run(SynchronizerSyncInfoCache.java:188)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2333)
+	at org.tigris.subversion.subclipse.core.status.SynchronizerSyncInfoCache.flushPendingStatuses(SynchronizerSyncInfoCache.java:185)
+	at org.tigris.subversion.subclipse.core.status.StatusCacheManager.resourceChanged(StatusCacheManager.java:408)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:305)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:295)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:158)
+	at org.eclipse.core.internal.resources.Workspace.broadcastBuildEvent(Workspace.java:367)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:150)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:244)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2021-09-13 09:28:41.784
+!MESSAGE Resource '/arioflow-gateway/target/classes/META-INF/maven/io.arioflow' does not exist.
+!STACK 0
+java.lang.Exception: Resource '/arioflow-gateway/target/classes/META-INF/maven/io.arioflow' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:330)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:204)
+	at org.eclipse.core.internal.resources.Synchronizer.setSyncInfo(Synchronizer.java:245)
+	at org.tigris.subversion.subclipse.core.status.SynchronizerSyncInfoCache$SyncInfoSynchronizedAccessor.flushPendingCacheWrites(SynchronizerSyncInfoCache.java:243)
+	at org.tigris.subversion.subclipse.core.status.SynchronizerSyncInfoCache$1.run(SynchronizerSyncInfoCache.java:188)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2333)
+	at org.tigris.subversion.subclipse.core.status.SynchronizerSyncInfoCache.flushPendingStatuses(SynchronizerSyncInfoCache.java:185)
+	at org.tigris.subversion.subclipse.core.status.StatusCacheManager.resourceChanged(StatusCacheManager.java:408)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:305)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:295)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:158)
+	at org.eclipse.core.internal.resources.Workspace.broadcastBuildEvent(Workspace.java:367)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:150)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:244)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.tigris.subversion.subclipse.core 4 368 2021-09-13 09:28:41.786
+!MESSAGE Resource '/arioflow-gateway/target/classes/META-INF/maven/io.arioflow/arioflow-gateway' does not exist.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException(/arioflow-gateway/target/classes/META-INF/maven/io.arioflow/arioflow-gateway)[368]: java.lang.Exception: Resource '/arioflow-gateway/target/classes/META-INF/maven/io.arioflow/arioflow-gateway' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:330)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:204)
+	at org.eclipse.core.internal.resources.Synchronizer.setSyncInfo(Synchronizer.java:245)
+	at org.tigris.subversion.subclipse.core.status.SynchronizerSyncInfoCache$SyncInfoSynchronizedAccessor.flushPendingCacheWrites(SynchronizerSyncInfoCache.java:243)
+	at org.tigris.subversion.subclipse.core.status.SynchronizerSyncInfoCache$1.run(SynchronizerSyncInfoCache.java:188)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2333)
+	at org.tigris.subversion.subclipse.core.status.SynchronizerSyncInfoCache.flushPendingStatuses(SynchronizerSyncInfoCache.java:185)
+	at org.tigris.subversion.subclipse.core.status.StatusCacheManager.resourceChanged(StatusCacheManager.java:408)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:305)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:295)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:158)
+	at org.eclipse.core.internal.resources.Workspace.broadcastBuildEvent(Workspace.java:367)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:150)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:244)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2021-09-13 09:28:41.786
+!MESSAGE Resource '/arioflow-gateway/target/classes/META-INF/maven/io.arioflow/arioflow-gateway' does not exist.
+!STACK 0
+java.lang.Exception: Resource '/arioflow-gateway/target/classes/META-INF/maven/io.arioflow/arioflow-gateway' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:330)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:204)
+	at org.eclipse.core.internal.resources.Synchronizer.setSyncInfo(Synchronizer.java:245)
+	at org.tigris.subversion.subclipse.core.status.SynchronizerSyncInfoCache$SyncInfoSynchronizedAccessor.flushPendingCacheWrites(SynchronizerSyncInfoCache.java:243)
+	at org.tigris.subversion.subclipse.core.status.SynchronizerSyncInfoCache$1.run(SynchronizerSyncInfoCache.java:188)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2333)
+	at org.tigris.subversion.subclipse.core.status.SynchronizerSyncInfoCache.flushPendingStatuses(SynchronizerSyncInfoCache.java:185)
+	at org.tigris.subversion.subclipse.core.status.StatusCacheManager.resourceChanged(StatusCacheManager.java:408)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:305)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:295)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:158)
+	at org.eclipse.core.internal.resources.Workspace.broadcastBuildEvent(Workspace.java:367)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:150)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:244)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-09-13 09:28:47.841
+!MESSAGE Could not transfer metadata com.arioflow.common:arioflow-common-dto:0.0.2-SNAPSHOT/maven-metadata.xml from/to maven-central (http://central.maven.org/maven2/): central.maven.org
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-09-13 09:28:47.853
+!MESSAGE com.arioflow.common:arioflow-common-dto:0.0.2-SNAPSHOT/maven-metadata.xmlfailed to transfer from http://central.maven.org/maven2/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of maven-central has elapsed or updates are forced. Original error: Could not transfer metadata com.arioflow.common:arioflow-common-dto:0.0.2-SNAPSHOT/maven-metadata.xml from/to maven-central (http://central.maven.org/maven2/): central.maven.org
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-09-13 09:28:47.853
+!MESSAGE Could not transfer metadata com.arioflow.common:arioflow-common-dto:0.0.2-SNAPSHOT/maven-metadata.xml from/to maven-central (http://central.maven.org/maven2/): central.maven.org
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-09-13 09:28:47.863
+!MESSAGE com.arioflow.common:arioflow-common-dto:0.0.2-SNAPSHOT/maven-metadata.xmlfailed to transfer from http://central.maven.org/maven2/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of maven-central has elapsed or updates are forced. Original error: Could not transfer metadata com.arioflow.common:arioflow-common-dto:0.0.2-SNAPSHOT/maven-metadata.xml from/to maven-central (http://central.maven.org/maven2/): central.maven.org
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-09-13 09:28:55.731
+!MESSAGE com.arioflow.common:arioflow-common-dto:0.0.2-SNAPSHOT/maven-metadata.xmlfailed to transfer from http://central.maven.org/maven2/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of maven-central has elapsed or updates are forced. Original error: Could not transfer metadata com.arioflow.common:arioflow-common-dto:0.0.2-SNAPSHOT/maven-metadata.xml from/to maven-central (http://central.maven.org/maven2/): central.maven.org
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-09-13 09:28:55.734
+!MESSAGE com.arioflow.common:arioflow-common-dto:0.0.2-SNAPSHOT/maven-metadata.xmlfailed to transfer from http://central.maven.org/maven2/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of maven-central has elapsed or updates are forced. Original error: Could not transfer metadata com.arioflow.common:arioflow-common-dto:0.0.2-SNAPSHOT/maven-metadata.xml from/to maven-central (http://central.maven.org/maven2/): central.maven.org
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-09-13 09:28:55.767
+!MESSAGE com.arioflow.common:arioflow-common-dto:0.0.2-SNAPSHOT/maven-metadata.xmlfailed to transfer from http://central.maven.org/maven2/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of maven-central has elapsed or updates are forced. Original error: Could not transfer metadata com.arioflow.common:arioflow-common-dto:0.0.2-SNAPSHOT/maven-metadata.xml from/to maven-central (http://central.maven.org/maven2/): central.maven.org
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2021-09-13 09:28:55.975
+!MESSAGE Could not download sources for com.arioflow.common:arioflow-common-dto:0.0.2-SNAPSHOT
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not resolve artifact com.arioflow.common:arioflow-common-dto:jar:sources:0.0.2-SNAPSHOT
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$4(MavenImpl.java:804)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:114)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:772)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:749)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:330)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:304)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:269)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:233)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:161)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1374)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:161)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Could not transfer artifact com.arioflow.common:arioflow-common-dto:jar:sources:0.0.2-SNAPSHOT from/to maven-central (http://central.maven.org/maven2/): central.maven.org
+org.eclipse.aether.transfer.ArtifactTransferException: Could not transfer artifact com.arioflow.common:arioflow-common-dto:jar:sources:0.0.2-SNAPSHOT from/to maven-central (http://central.maven.org/maven2/): central.maven.org
+	at io.takari.aether.connector.AetherRepositoryConnector$2.wrap(AetherRepositoryConnector.java:889)
+	at io.takari.aether.connector.AetherRepositoryConnector$2.wrap(AetherRepositoryConnector.java:1)
+	at io.takari.aether.connector.AetherRepositoryConnector$GetTask.flush(AetherRepositoryConnector.java:659)
+	at io.takari.aether.connector.AetherRepositoryConnector.get(AetherRepositoryConnector.java:337)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.performDownloads(DefaultArtifactResolver.java:513)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolve(DefaultArtifactResolver.java:401)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifacts(DefaultArtifactResolver.java:229)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifact(DefaultArtifactResolver.java:207)
+	at org.eclipse.aether.internal.impl.DefaultRepositorySystem.resolveArtifact(DefaultRepositorySystem.java:262)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$4(MavenImpl.java:781)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:114)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:772)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:749)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:330)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:304)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:269)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:233)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:161)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1374)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:161)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.net.UnknownHostException: central.maven.org
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:800)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1507)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1366)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1300)
+	at okhttp3.Dns.lambda$static$0(Dns.java:39)
+	at okhttp3.internal.connection.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:171)
+	at okhttp3.internal.connection.RouteSelector.nextProxy(RouteSelector.java:135)
+	at okhttp3.internal.connection.RouteSelector.next(RouteSelector.java:84)
+	at okhttp3.internal.connection.ExchangeFinder.findConnection(ExchangeFinder.java:187)
+	at okhttp3.internal.connection.ExchangeFinder.findHealthyConnection(ExchangeFinder.java:107)
+	at okhttp3.internal.connection.ExchangeFinder.find(ExchangeFinder.java:87)
+	at okhttp3.internal.connection.Transmitter.newExchange(Transmitter.java:169)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:41)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:142)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:117)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:94)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:142)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:117)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:142)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:88)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:142)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:117)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:221)
+	at okhttp3.RealCall.execute(RealCall.java:81)
+	at io.takari.aether.okhttp.OkHttpAetherClient.execute(OkHttpAetherClient.java:215)
+	at io.takari.aether.okhttp.OkHttpAetherClient.get(OkHttpAetherClient.java:161)
+	at io.takari.aether.connector.AetherRepositoryConnector$GetTask.getResponse(AetherRepositoryConnector.java:655)
+	at io.takari.aether.connector.AetherRepositoryConnector$GetTask.resumableGet(AetherRepositoryConnector.java:600)
+	at io.takari.aether.connector.AetherRepositoryConnector$GetTask.run(AetherRepositoryConnector.java:481)
+	at io.takari.aether.connector.AetherRepositoryConnector$DirectExecutor.execute(AetherRepositoryConnector.java:915)
+	at io.takari.aether.connector.AetherRepositoryConnector.get(AetherRepositoryConnector.java:331)
+	... 22 more
+!SUBENTRY 1 org.eclipse.m2e.core 4 -1 2021-09-13 09:28:55.977
+!MESSAGE Could not resolve artifact com.arioflow.common:arioflow-common-dto:jar:sources:0.0.2-SNAPSHOT
+!SUBENTRY 2 org.eclipse.m2e.core 4 -1 2021-09-13 09:28:55.977
+!MESSAGE Could not transfer artifact com.arioflow.common:arioflow-common-dto:jar:sources:0.0.2-SNAPSHOT from/to maven-central (http://central.maven.org/maven2/): central.maven.org
+!STACK 0
+org.eclipse.aether.transfer.ArtifactTransferException: Could not transfer artifact com.arioflow.common:arioflow-common-dto:jar:sources:0.0.2-SNAPSHOT from/to maven-central (http://central.maven.org/maven2/): central.maven.org
+	at io.takari.aether.connector.AetherRepositoryConnector$2.wrap(AetherRepositoryConnector.java:889)
+	at io.takari.aether.connector.AetherRepositoryConnector$2.wrap(AetherRepositoryConnector.java:1)
+	at io.takari.aether.connector.AetherRepositoryConnector$GetTask.flush(AetherRepositoryConnector.java:659)
+	at io.takari.aether.connector.AetherRepositoryConnector.get(AetherRepositoryConnector.java:337)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.performDownloads(DefaultArtifactResolver.java:513)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolve(DefaultArtifactResolver.java:401)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifacts(DefaultArtifactResolver.java:229)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifact(DefaultArtifactResolver.java:207)
+	at org.eclipse.aether.internal.impl.DefaultRepositorySystem.resolveArtifact(DefaultRepositorySystem.java:262)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$4(MavenImpl.java:781)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:114)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:772)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:749)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:330)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:304)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:269)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:233)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:161)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1374)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:161)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.net.UnknownHostException: central.maven.org
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:800)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1507)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1366)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1300)
+	at okhttp3.Dns.lambda$static$0(Dns.java:39)
+	at okhttp3.internal.connection.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:171)
+	at okhttp3.internal.connection.RouteSelector.nextProxy(RouteSelector.java:135)
+	at okhttp3.internal.connection.RouteSelector.next(RouteSelector.java:84)
+	at okhttp3.internal.connection.ExchangeFinder.findConnection(ExchangeFinder.java:187)
+	at okhttp3.internal.connection.ExchangeFinder.findHealthyConnection(ExchangeFinder.java:107)
+	at okhttp3.internal.connection.ExchangeFinder.find(ExchangeFinder.java:87)
+	at okhttp3.internal.connection.Transmitter.newExchange(Transmitter.java:169)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:41)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:142)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:117)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:94)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:142)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:117)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:142)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:88)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:142)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:117)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:221)
+	at okhttp3.RealCall.execute(RealCall.java:81)
+	at io.takari.aether.okhttp.OkHttpAetherClient.execute(OkHttpAetherClient.java:215)
+	at io.takari.aether.okhttp.OkHttpAetherClient.get(OkHttpAetherClient.java:161)
+	at io.takari.aether.connector.AetherRepositoryConnector$GetTask.getResponse(AetherRepositoryConnector.java:655)
+	at io.takari.aether.connector.AetherRepositoryConnector$GetTask.resumableGet(AetherRepositoryConnector.java:600)
+	at io.takari.aether.connector.AetherRepositoryConnector$GetTask.run(AetherRepositoryConnector.java:481)
+	at io.takari.aether.connector.AetherRepositoryConnector$DirectExecutor.execute(AetherRepositoryConnector.java:915)
+	at io.takari.aether.connector.AetherRepositoryConnector.get(AetherRepositoryConnector.java:331)
+	... 22 more
+
+!ENTRY Activator 1 0 2021-09-13 09:28:56.463
+!MESSAGE Has main method computation for project 'arioflow-gateway'
+
+!ENTRY Activator 1 0 2021-09-13 09:28:57.882
+!MESSAGE Has main method computation for project 'arioflow-gateway'
+
+!ENTRY Activator 1 0 2021-09-13 09:28:58.849
+!MESSAGE Has main method computation for project 'arioflow-gateway'
+
+!ENTRY Activator 1 0 2021-09-13 09:28:59.989
+!MESSAGE Has main method computation for project 'arioflow-gateway'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-09-13 09:29:00.303
+!MESSAGE com.arioflow.common:arioflow-common-dto:0.0.2-SNAPSHOT/maven-metadata.xmlfailed to transfer from http://central.maven.org/maven2/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of maven-central has elapsed or updates are forced. Original error: Could not transfer metadata com.arioflow.common:arioflow-common-dto:0.0.2-SNAPSHOT/maven-metadata.xml from/to maven-central (http://central.maven.org/maven2/): central.maven.org
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-09-13 09:29:00.307
+!MESSAGE com.arioflow.common:arioflow-common-dto:0.0.2-SNAPSHOT/maven-metadata.xmlfailed to transfer from http://central.maven.org/maven2/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of maven-central has elapsed or updates are forced. Original error: Could not transfer metadata com.arioflow.common:arioflow-common-dto:0.0.2-SNAPSHOT/maven-metadata.xml from/to maven-central (http://central.maven.org/maven2/): central.maven.org
+
+!ENTRY Activator 1 0 2021-09-13 09:29:00.323
+!MESSAGE Has main method computation for project 'arioflow-gateway'
+
+!ENTRY Activator 1 0 2021-09-13 09:29:00.464
+!MESSAGE Has main method computation for project 'arioflow-gateway'
+
+!ENTRY Activator 1 0 2021-09-13 09:29:00.603
+!MESSAGE Has main method computation for project 'arioflow-gateway'
+
+!ENTRY Activator 1 0 2021-09-13 09:29:00.731
+!MESSAGE Has main method computation for project 'arioflow-gateway'
+
+!ENTRY Activator 1 0 2021-09-13 09:29:00.855
+!MESSAGE Has main method computation for project 'arioflow-gateway'
+
+!ENTRY Activator 1 0 2021-09-13 09:29:00.995
+!MESSAGE Has main method computation for project 'arioflow-gateway'
+
+!ENTRY Activator 1 0 2021-09-13 09:29:01.145
+!MESSAGE Has main method computation for project 'arioflow-gateway'
+
+!ENTRY Activator 1 0 2021-09-13 09:29:01.285
+!MESSAGE Has main method computation for project 'arioflow-gateway'
+
+!ENTRY Activator 1 0 2021-09-13 09:29:01.391
+!MESSAGE Has main method computation for project 'arioflow-gateway'
+
+!ENTRY Activator 1 0 2021-09-13 09:29:01.512
+!MESSAGE Has main method computation for project 'arioflow-gateway'
+
+!ENTRY Activator 1 0 2021-09-13 09:29:01.655
+!MESSAGE Has main method computation for project 'arioflow-gateway'
+
+!ENTRY Activator 1 0 2021-09-13 09:29:01.786
+!MESSAGE Has main method computation for project 'arioflow-gateway'
+
+!ENTRY Activator 1 0 2021-09-13 09:29:01.909
+!MESSAGE Has main method computation for project 'arioflow-gateway'
+
+!ENTRY Activator 1 0 2021-09-13 09:29:02.014
+!MESSAGE Has main method computation for project 'arioflow-gateway'
+
+!ENTRY Activator 1 0 2021-09-13 09:29:02.127
+!MESSAGE Has main method computation for project 'arioflow-gateway'
+
+!ENTRY Activator 1 0 2021-09-13 09:29:02.277
+!MESSAGE Has main method computation for project 'arioflow-gateway'
+
+!ENTRY Activator 1 0 2021-09-13 09:29:02.417
+!MESSAGE Has main method computation for project 'arioflow-gateway'
+
+!ENTRY Activator 1 0 2021-09-13 09:29:02.547
+!MESSAGE Has main method computation for project 'arioflow-gateway'
+
+!ENTRY Activator 1 0 2021-09-13 09:29:03.173
+!MESSAGE Has main method computation for project 'arioflow-gateway'
+
+!ENTRY Activator 1 0 2021-09-13 09:29:03.351
+!MESSAGE Has main method computation for project 'arioflow-gateway'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-09-13 09:29:04.560
+!MESSAGE com.arioflow.common:arioflow-common-dto:0.0.2-SNAPSHOT/maven-metadata.xmlfailed to transfer from http://central.maven.org/maven2/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of maven-central has elapsed or updates are forced. Original error: Could not transfer metadata com.arioflow.common:arioflow-common-dto:0.0.2-SNAPSHOT/maven-metadata.xml from/to maven-central (http://central.maven.org/maven2/): central.maven.org
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-09-13 09:29:04.567
+!MESSAGE com.arioflow.common:arioflow-common-dto:0.0.2-SNAPSHOT/maven-metadata.xmlfailed to transfer from http://central.maven.org/maven2/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of maven-central has elapsed or updates are forced. Original error: Could not transfer metadata com.arioflow.common:arioflow-common-dto:0.0.2-SNAPSHOT/maven-metadata.xml from/to maven-central (http://central.maven.org/maven2/): central.maven.org
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-09-13 09:29:04.595
+!MESSAGE com.arioflow.common:arioflow-common-dto:0.0.2-SNAPSHOT/maven-metadata.xmlfailed to transfer from http://central.maven.org/maven2/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of maven-central has elapsed or updates are forced. Original error: Could not transfer metadata com.arioflow.common:arioflow-common-dto:0.0.2-SNAPSHOT/maven-metadata.xml from/to maven-central (http://central.maven.org/maven2/): central.maven.org
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2021-09-13 09:29:04.757
+!MESSAGE Could not download javadoc for com.arioflow.common:arioflow-common-dto:0.0.2-SNAPSHOT
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not resolve artifact com.arioflow.common:arioflow-common-dto:jar:javadoc:0.0.2-SNAPSHOT
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$4(MavenImpl.java:804)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:114)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:772)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:749)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:330)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:316)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:269)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:233)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:161)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1374)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:161)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Could not transfer artifact com.arioflow.common:arioflow-common-dto:jar:javadoc:0.0.2-SNAPSHOT from/to maven-central (http://central.maven.org/maven2/): central.maven.org
+org.eclipse.aether.transfer.ArtifactTransferException: Could not transfer artifact com.arioflow.common:arioflow-common-dto:jar:javadoc:0.0.2-SNAPSHOT from/to maven-central (http://central.maven.org/maven2/): central.maven.org
+	at io.takari.aether.connector.AetherRepositoryConnector$2.wrap(AetherRepositoryConnector.java:889)
+	at io.takari.aether.connector.AetherRepositoryConnector$2.wrap(AetherRepositoryConnector.java:1)
+	at io.takari.aether.connector.AetherRepositoryConnector$GetTask.flush(AetherRepositoryConnector.java:659)
+	at io.takari.aether.connector.AetherRepositoryConnector.get(AetherRepositoryConnector.java:337)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.performDownloads(DefaultArtifactResolver.java:513)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolve(DefaultArtifactResolver.java:401)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifacts(DefaultArtifactResolver.java:229)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifact(DefaultArtifactResolver.java:207)
+	at org.eclipse.aether.internal.impl.DefaultRepositorySystem.resolveArtifact(DefaultRepositorySystem.java:262)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$4(MavenImpl.java:781)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:114)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:772)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:749)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:330)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:316)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:269)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:233)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:161)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1374)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:161)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.net.UnknownHostException: central.maven.org
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:800)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1507)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1366)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1300)
+	at okhttp3.Dns.lambda$static$0(Dns.java:39)
+	at okhttp3.internal.connection.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:171)
+	at okhttp3.internal.connection.RouteSelector.nextProxy(RouteSelector.java:135)
+	at okhttp3.internal.connection.RouteSelector.next(RouteSelector.java:84)
+	at okhttp3.internal.connection.ExchangeFinder.findConnection(ExchangeFinder.java:187)
+	at okhttp3.internal.connection.ExchangeFinder.findHealthyConnection(ExchangeFinder.java:107)
+	at okhttp3.internal.connection.ExchangeFinder.find(ExchangeFinder.java:87)
+	at okhttp3.internal.connection.Transmitter.newExchange(Transmitter.java:169)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:41)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:142)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:117)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:94)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:142)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:117)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:142)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:88)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:142)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:117)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:221)
+	at okhttp3.RealCall.execute(RealCall.java:81)
+	at io.takari.aether.okhttp.OkHttpAetherClient.execute(OkHttpAetherClient.java:215)
+	at io.takari.aether.okhttp.OkHttpAetherClient.get(OkHttpAetherClient.java:161)
+	at io.takari.aether.connector.AetherRepositoryConnector$GetTask.getResponse(AetherRepositoryConnector.java:655)
+	at io.takari.aether.connector.AetherRepositoryConnector$GetTask.resumableGet(AetherRepositoryConnector.java:600)
+	at io.takari.aether.connector.AetherRepositoryConnector$GetTask.run(AetherRepositoryConnector.java:481)
+	at io.takari.aether.connector.AetherRepositoryConnector$DirectExecutor.execute(AetherRepositoryConnector.java:915)
+	at io.takari.aether.connector.AetherRepositoryConnector.get(AetherRepositoryConnector.java:331)
+	... 22 more
+!SUBENTRY 1 org.eclipse.m2e.core 4 -1 2021-09-13 09:29:04.757
+!MESSAGE Could not resolve artifact com.arioflow.common:arioflow-common-dto:jar:javadoc:0.0.2-SNAPSHOT
+!SUBENTRY 2 org.eclipse.m2e.core 4 -1 2021-09-13 09:29:04.757
+!MESSAGE Could not transfer artifact com.arioflow.common:arioflow-common-dto:jar:javadoc:0.0.2-SNAPSHOT from/to maven-central (http://central.maven.org/maven2/): central.maven.org
+!STACK 0
+org.eclipse.aether.transfer.ArtifactTransferException: Could not transfer artifact com.arioflow.common:arioflow-common-dto:jar:javadoc:0.0.2-SNAPSHOT from/to maven-central (http://central.maven.org/maven2/): central.maven.org
+	at io.takari.aether.connector.AetherRepositoryConnector$2.wrap(AetherRepositoryConnector.java:889)
+	at io.takari.aether.connector.AetherRepositoryConnector$2.wrap(AetherRepositoryConnector.java:1)
+	at io.takari.aether.connector.AetherRepositoryConnector$GetTask.flush(AetherRepositoryConnector.java:659)
+	at io.takari.aether.connector.AetherRepositoryConnector.get(AetherRepositoryConnector.java:337)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.performDownloads(DefaultArtifactResolver.java:513)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolve(DefaultArtifactResolver.java:401)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifacts(DefaultArtifactResolver.java:229)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifact(DefaultArtifactResolver.java:207)
+	at org.eclipse.aether.internal.impl.DefaultRepositorySystem.resolveArtifact(DefaultRepositorySystem.java:262)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$4(MavenImpl.java:781)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:114)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:772)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:749)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:330)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:316)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:269)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:233)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:161)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1374)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:161)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.net.UnknownHostException: central.maven.org
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:800)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1507)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1366)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1300)
+	at okhttp3.Dns.lambda$static$0(Dns.java:39)
+	at okhttp3.internal.connection.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:171)
+	at okhttp3.internal.connection.RouteSelector.nextProxy(RouteSelector.java:135)
+	at okhttp3.internal.connection.RouteSelector.next(RouteSelector.java:84)
+	at okhttp3.internal.connection.ExchangeFinder.findConnection(ExchangeFinder.java:187)
+	at okhttp3.internal.connection.ExchangeFinder.findHealthyConnection(ExchangeFinder.java:107)
+	at okhttp3.internal.connection.ExchangeFinder.find(ExchangeFinder.java:87)
+	at okhttp3.internal.connection.Transmitter.newExchange(Transmitter.java:169)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:41)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:142)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:117)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:94)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:142)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:117)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:142)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:88)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:142)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:117)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:221)
+	at okhttp3.RealCall.execute(RealCall.java:81)
+	at io.takari.aether.okhttp.OkHttpAetherClient.execute(OkHttpAetherClient.java:215)
+	at io.takari.aether.okhttp.OkHttpAetherClient.get(OkHttpAetherClient.java:161)
+	at io.takari.aether.connector.AetherRepositoryConnector$GetTask.getResponse(AetherRepositoryConnector.java:655)
+	at io.takari.aether.connector.AetherRepositoryConnector$GetTask.resumableGet(AetherRepositoryConnector.java:600)
+	at io.takari.aether.connector.AetherRepositoryConnector$GetTask.run(AetherRepositoryConnector.java:481)
+	at io.takari.aether.connector.AetherRepositoryConnector$DirectExecutor.execute(AetherRepositoryConnector.java:915)
+	at io.takari.aether.connector.AetherRepositoryConnector.get(AetherRepositoryConnector.java:331)
+	... 22 more
+
+!ENTRY Activator 1 0 2021-09-13 09:29:05.964
+!MESSAGE Has main method computation for project 'arioflow-gateway'
+
+!ENTRY Activator 1 0 2021-09-13 09:29:10.378
+!MESSAGE Has main method computation for project 'arioflow-gateway'
+
+!ENTRY Activator 1 0 2021-09-13 09:29:14.901
+!MESSAGE Has main method computation for project 'arioflow-gateway'
+
+!ENTRY Activator 1 0 2021-09-13 09:29:15.675
+!MESSAGE Has main method computation for project 'arioflow-gateway'
+
+!ENTRY Activator 1 0 2021-09-13 09:29:15.795
+!MESSAGE Has main method computation for project 'arioflow-gateway'
+
+!ENTRY Activator 1 0 2021-09-13 09:29:16.234
+!MESSAGE Has main method computation for project 'arioflow-gateway'
+
+!ENTRY Activator 1 0 2021-09-13 09:29:17.848
+!MESSAGE Has main method computation for project 'arioflow-gateway'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-09-13 09:29:22.758
+!MESSAGE The POM for com.sun.xml.bind:jaxb-impl:jar:2.2.11 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-09-13 09:29:22.795
+!MESSAGE The POM for com.sun.xml.bind:jaxb-core:jar:2.2.11 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-09-13 09:29:25.159
+!MESSAGE commons-codec:commons-codec/maven-metadata.xmlfailed to transfer from http://central.maven.org/maven2/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of maven-central has elapsed or updates are forced. Original error: Could not transfer metadata commons-codec:commons-codec/maven-metadata.xml from/to maven-central (http://central.maven.org/maven2/): central.maven.org
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-09-13 09:29:25.855
+!MESSAGE org.springframework:spring-context/maven-metadata.xmlfailed to transfer from http://central.maven.org/maven2/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of maven-central has elapsed or updates are forced. Original error: Could not transfer metadata org.springframework:spring-context/maven-metadata.xml from/to maven-central (http://central.maven.org/maven2/): central.maven.org
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-09-13 09:29:34.916
+!MESSAGE com.google.code.gson:gson/maven-metadata.xmlfailed to transfer from http://central.maven.org/maven2/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of maven-central has elapsed or updates are forced. Original error: Could not transfer metadata com.google.code.gson:gson/maven-metadata.xml from/to maven-central (http://central.maven.org/maven2/): central.maven.org
+
+!ENTRY Activator 1 0 2021-09-13 09:29:37.828
+!MESSAGE Has main method computation for project 'arioflow-gateway'
+
+!ENTRY Activator 1 0 2021-09-13 09:29:41.045
+!MESSAGE Has main method computation for project 'arioflow-gateway'
+
+!ENTRY Activator 1 0 2021-09-13 09:29:41.978
+!MESSAGE Has main method computation for project 'arioflow-gateway'
+
+!ENTRY Activator 1 0 2021-09-13 09:29:43.454
+!MESSAGE Has main method computation for project 'arioflow-gateway'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-09-13 09:29:44.226
+!MESSAGE The POM for com.sun.xml.bind:jaxb-impl:jar:2.2.11 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-09-13 09:29:44.237
+!MESSAGE The POM for com.sun.xml.bind:jaxb-core:jar:2.2.11 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-09-13 09:29:44.546
+!MESSAGE commons-codec:commons-codec/maven-metadata.xmlfailed to transfer from http://central.maven.org/maven2/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of maven-central has elapsed or updates are forced. Original error: Could not transfer metadata commons-codec:commons-codec/maven-metadata.xml from/to maven-central (http://central.maven.org/maven2/): central.maven.org
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-09-13 09:29:44.676
+!MESSAGE org.springframework:spring-context/maven-metadata.xmlfailed to transfer from http://central.maven.org/maven2/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of maven-central has elapsed or updates are forced. Original error: Could not transfer metadata org.springframework:spring-context/maven-metadata.xml from/to maven-central (http://central.maven.org/maven2/): central.maven.org
+
+!ENTRY Activator 1 0 2021-09-13 09:29:44.979
+!MESSAGE Has main method computation for project 'arioflow-gateway'
+
+!ENTRY Activator 1 0 2021-09-13 09:29:45.128
+!MESSAGE Has main method computation for project 'arioflow-gateway'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-09-13 09:29:45.571
+!MESSAGE com.google.code.gson:gson/maven-metadata.xmlfailed to transfer from http://central.maven.org/maven2/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of maven-central has elapsed or updates are forced. Original error: Could not transfer metadata com.google.code.gson:gson/maven-metadata.xml from/to maven-central (http://central.maven.org/maven2/): central.maven.org
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-09-13 09:29:46.359
+!MESSAGE com.fasterxml.jackson.core:jackson-annotations/maven-metadata.xmlfailed to transfer from http://central.maven.org/maven2/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of maven-central has elapsed or updates are forced. Original error: Could not transfer metadata com.fasterxml.jackson.core:jackson-annotations/maven-metadata.xml from/to maven-central (http://central.maven.org/maven2/): central.maven.org
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-09-13 09:29:46.636
+!MESSAGE com.fasterxml.jackson.core:jackson-annotations:2.6.0-rc3-SNAPSHOT/maven-metadata.xmlfailed to transfer from http://central.maven.org/maven2/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of maven-central has elapsed or updates are forced. Original error: Could not transfer metadata com.fasterxml.jackson.core:jackson-annotations:2.6.0-rc3-SNAPSHOT/maven-metadata.xml from/to maven-central (http://central.maven.org/maven2/): central.maven.org
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-09-13 09:29:46.662
+!MESSAGE com.fasterxml.jackson.core:jackson-annotations:2.6.0-rc3-SNAPSHOT/maven-metadata.xmlfailed to transfer from http://central.maven.org/maven2/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of maven-central has elapsed or updates are forced. Original error: Could not transfer metadata com.fasterxml.jackson.core:jackson-annotations:2.6.0-rc3-SNAPSHOT/maven-metadata.xml from/to maven-central (http://central.maven.org/maven2/): central.maven.org
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-09-13 09:29:46.879
+!MESSAGE com.fasterxml.jackson.core:jackson-annotations:2.6.0-SNAPSHOT/maven-metadata.xmlfailed to transfer from http://central.maven.org/maven2/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of maven-central has elapsed or updates are forced. Original error: Could not transfer metadata com.fasterxml.jackson.core:jackson-annotations:2.6.0-SNAPSHOT/maven-metadata.xml from/to maven-central (http://central.maven.org/maven2/): central.maven.org
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-09-13 09:29:46.901
+!MESSAGE com.fasterxml.jackson.core:jackson-annotations:2.6.0-SNAPSHOT/maven-metadata.xmlfailed to transfer from http://central.maven.org/maven2/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of maven-central has elapsed or updates are forced. Original error: Could not transfer metadata com.fasterxml.jackson.core:jackson-annotations:2.6.0-SNAPSHOT/maven-metadata.xml from/to maven-central (http://central.maven.org/maven2/): central.maven.org
+
+!ENTRY Activator 1 0 2021-09-13 09:29:47.366
+!MESSAGE Has main method computation for project 'arioflow-gateway'
+
+!ENTRY Activator 1 0 2021-09-13 09:29:47.465
+!MESSAGE Has main method computation for project 'arioflow-gateway'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-09-13 09:29:50.759
+!MESSAGE commons-codec:commons-codec/maven-metadata.xmlfailed to transfer from http://central.maven.org/maven2/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of maven-central has elapsed or updates are forced. Original error: Could not transfer metadata commons-codec:commons-codec/maven-metadata.xml from/to maven-central (http://central.maven.org/maven2/): central.maven.org
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-09-13 09:29:50.902
+!MESSAGE org.springframework:spring-context/maven-metadata.xmlfailed to transfer from http://central.maven.org/maven2/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of maven-central has elapsed or updates are forced. Original error: Could not transfer metadata org.springframework:spring-context/maven-metadata.xml from/to maven-central (http://central.maven.org/maven2/): central.maven.org
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-09-13 09:29:51.625
+!MESSAGE com.google.code.gson:gson/maven-metadata.xmlfailed to transfer from http://central.maven.org/maven2/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of maven-central has elapsed or updates are forced. Original error: Could not transfer metadata com.google.code.gson:gson/maven-metadata.xml from/to maven-central (http://central.maven.org/maven2/): central.maven.org
+
+!ENTRY Activator 1 0 2021-09-13 09:29:53.282
+!MESSAGE Has main method computation for project 'arioflow-gateway'
+
+!ENTRY Activator 1 0 2021-09-13 09:29:55.510
+!MESSAGE Has main method computation for project 'arioflow-gateway'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-09-13 09:30:02.111
+!MESSAGE com.fasterxml.jackson.core:jackson-annotations/maven-metadata.xmlfailed to transfer from http://central.maven.org/maven2/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of maven-central has elapsed or updates are forced. Original error: Could not transfer metadata com.fasterxml.jackson.core:jackson-annotations/maven-metadata.xml from/to maven-central (http://central.maven.org/maven2/): central.maven.org
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-09-13 09:30:02.163
+!MESSAGE com.fasterxml.jackson.core:jackson-annotations:2.6.0-rc3-SNAPSHOT/maven-metadata.xmlfailed to transfer from http://central.maven.org/maven2/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of maven-central has elapsed or updates are forced. Original error: Could not transfer metadata com.fasterxml.jackson.core:jackson-annotations:2.6.0-rc3-SNAPSHOT/maven-metadata.xml from/to maven-central (http://central.maven.org/maven2/): central.maven.org
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-09-13 09:30:02.167
+!MESSAGE com.fasterxml.jackson.core:jackson-annotations:2.6.0-rc3-SNAPSHOT/maven-metadata.xmlfailed to transfer from http://central.maven.org/maven2/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of maven-central has elapsed or updates are forced. Original error: Could not transfer metadata com.fasterxml.jackson.core:jackson-annotations:2.6.0-rc3-SNAPSHOT/maven-metadata.xml from/to maven-central (http://central.maven.org/maven2/): central.maven.org
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-09-13 09:30:02.190
+!MESSAGE com.fasterxml.jackson.core:jackson-annotations:2.6.0-SNAPSHOT/maven-metadata.xmlfailed to transfer from http://central.maven.org/maven2/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of maven-central has elapsed or updates are forced. Original error: Could not transfer metadata com.fasterxml.jackson.core:jackson-annotations:2.6.0-SNAPSHOT/maven-metadata.xml from/to maven-central (http://central.maven.org/maven2/): central.maven.org
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-09-13 09:30:02.197
+!MESSAGE com.fasterxml.jackson.core:jackson-annotations:2.6.0-SNAPSHOT/maven-metadata.xmlfailed to transfer from http://central.maven.org/maven2/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of maven-central has elapsed or updates are forced. Original error: Could not transfer metadata com.fasterxml.jackson.core:jackson-annotations:2.6.0-SNAPSHOT/maven-metadata.xml from/to maven-central (http://central.maven.org/maven2/): central.maven.org
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-09-13 09:30:03.033
+!MESSAGE commons-codec:commons-codec/maven-metadata.xmlfailed to transfer from http://central.maven.org/maven2/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of maven-central has elapsed or updates are forced. Original error: Could not transfer metadata commons-codec:commons-codec/maven-metadata.xml from/to maven-central (http://central.maven.org/maven2/): central.maven.org
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-09-13 09:30:03.174
+!MESSAGE org.springframework:spring-context/maven-metadata.xmlfailed to transfer from http://central.maven.org/maven2/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of maven-central has elapsed or updates are forced. Original error: Could not transfer metadata org.springframework:spring-context/maven-metadata.xml from/to maven-central (http://central.maven.org/maven2/): central.maven.org
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-09-13 09:30:04.147
+!MESSAGE com.google.code.gson:gson/maven-metadata.xmlfailed to transfer from http://central.maven.org/maven2/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of maven-central has elapsed or updates are forced. Original error: Could not transfer metadata com.google.code.gson:gson/maven-metadata.xml from/to maven-central (http://central.maven.org/maven2/): central.maven.org
+
+!ENTRY Activator 1 0 2021-09-13 09:30:09.288
+!MESSAGE Has main method computation for project 'arioflow-gateway'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-13 09:31:31.368
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-13 09:31:31.398
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@28458ed4[org.springframework.tooling.boot.ls:1.26.0.202106150606(id=559)]
+
+!ENTRY Activator 1 0 2021-09-13 09:31:31.406
+!MESSAGE Has main method computation for project 'arioflow-gateway'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-13 09:31:31.431
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY Activator 1 0 2021-09-13 09:31:31.661
+!MESSAGE Has main method computation for project 'arioflow-gateway'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-13 09:31:32.035
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY Activator 1 0 2021-09-13 09:31:32.610
+!MESSAGE Has main method computation for project 'arioflow-gateway'
+
+!ENTRY Activator 1 0 2021-09-13 09:31:32.769
+!MESSAGE Has main method computation for project 'arioflow-gateway'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-13 09:31:45.087
+!MESSAGE Boot LS startup time from start to initialized: 13646ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-13 09:31:45.384
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.LUajmNbRisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-13 09:31:45.396
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-13 09:31:45.401
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-13 09:31:45.403
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-13 09:31:45.404
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-13 09:31:45.405
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.LUajmNbR => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-13 09:31:45.423
+!MESSAGE classpath=159 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-13 09:31:45.444
+!MESSAGE buffering callback sts4.classpath.LUajmNbR arioflow-gateway false 159
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-13 09:31:45.446
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-13 09:31:45.458
+!MESSAGE classpath=75 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-13 09:31:45.464
+!MESSAGE buffering callback sts4.classpath.LUajmNbR common false 75
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-13 09:31:45.465
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-13 09:31:45.472
+!MESSAGE classpath=86 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-13 09:31:45.477
+!MESSAGE buffering callback sts4.classpath.LUajmNbR front-afm-dto false 86
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-13 09:31:45.480
+!MESSAGE executing callback sts4.classpath.LUajmNbR 3 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-13 09:31:46.809
+!MESSAGE executing callback sts4.classpath.LUajmNbR SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-13 09:31:57.363
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.LUajmNbR
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-13 09:31:57.364
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.LUajmNbR
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-13 09:31:57.365
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-13 09:31:57.366
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.LUajmNbR => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-13 09:32:11.983
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-13 09:32:11.985
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@28458ed4[org.springframework.tooling.boot.ls:1.26.0.202106150606(id=559)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-13 09:32:11.987
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.eclipse.jface 2 0 2021-09-13 09:32:12.683
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-09-13 09:32:12.683
+!MESSAGE A conflict occurred for CTRL+SHIFT+C:
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.tm4e.languageconfiguration.togglelinecommentcommand,Toggle Line Comment,
+		,
+		Category(org.eclipse.tm4e.languageconfiguration.category,TM4E Language Configuration,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@57ba286d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.springframework.tooling.boot.ls.ToggleComment,Toggle Comment,
+		,
+		Category(org.springframework.ide.eclipse.commands,Spring Generic Text Editor,Spring Language Server Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@470a65ae,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-13 09:32:23.537
+!MESSAGE Boot LS startup time from start to initialized: 11545ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-13 09:32:23.863
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.NNRxIFOWisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-13 09:32:23.866
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-13 09:32:23.867
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-13 09:32:23.869
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-13 09:32:23.871
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-13 09:32:23.872
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.NNRxIFOW => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-13 09:32:23.888
+!MESSAGE classpath=159 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-13 09:32:23.905
+!MESSAGE buffering callback sts4.classpath.NNRxIFOW arioflow-gateway false 159
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-13 09:32:23.919
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-13 09:32:23.933
+!MESSAGE classpath=75 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-13 09:32:23.940
+!MESSAGE buffering callback sts4.classpath.NNRxIFOW common false 75
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-13 09:32:23.941
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-13 09:32:23.980
+!MESSAGE classpath=86 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-13 09:32:24.013
+!MESSAGE buffering callback sts4.classpath.NNRxIFOW front-afm-dto false 86
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-13 09:32:24.015
+!MESSAGE executing callback sts4.classpath.NNRxIFOW 3 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-13 09:32:25.775
+!MESSAGE executing callback sts4.classpath.NNRxIFOW SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-13 14:31:45.117
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.NNRxIFOW
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-13 14:31:45.118
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.NNRxIFOW
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-13 14:31:45.119
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-13 14:31:45.120
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.NNRxIFOW => OK
+
+!ENTRY org.eclipse.ui 2 2 2021-09-13 14:31:45.766
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)

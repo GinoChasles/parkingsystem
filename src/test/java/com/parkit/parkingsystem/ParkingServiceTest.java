@@ -1,14 +1,12 @@
 package com.parkit.parkingsystem;
 
 import com.parkit.parkingsystem.constants.ParkingType;
-import com.parkit.parkingsystem.dao.ParkingSpotDAO;
-import com.parkit.parkingsystem.dao.TicketDAO;
-import com.parkit.parkingsystem.integration.service.DataBasePrepareService;
+import com.parkit.parkingsystem.dao.ParkingSpotDao;
+import com.parkit.parkingsystem.dao.TicketDao;
 import com.parkit.parkingsystem.model.ParkingSpot;
 import com.parkit.parkingsystem.model.Ticket;
 import com.parkit.parkingsystem.service.ParkingService;
 import com.parkit.parkingsystem.util.InputReaderUtil;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -16,7 +14,6 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import java.time.LocalDateTime;
 import java.util.Date;
 
 import static org.mockito.Mockito.*;
@@ -31,10 +28,10 @@ class ParkingServiceTest {
     private static InputReaderUtil inputReaderUtil;
 
     @Mock
-    private static ParkingSpotDAO parkingSpotDAO;
+    private static ParkingSpotDao parkingSpotDAO;
 
     @Mock
-    private static TicketDAO ticketDAO;
+    private static TicketDao ticketDAO;
 
 
     @BeforeEach
@@ -44,7 +41,7 @@ class ParkingServiceTest {
 
             ParkingSpot parkingSpot = new ParkingSpot(1, ParkingType.CAR, false);
             ticket = new Ticket();
-            ticket.setInTime(LocalDateTime.now());
+            ticket.setInTime(new Date());
             ticket.setParkingSpot(parkingSpot);
             ticket.setVehicleRegNumber("ABCDEF");
             when(ticketDAO.getTicket(anyString())).thenReturn(ticket);

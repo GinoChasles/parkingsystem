@@ -1,151 +1,178 @@
 package com.parkit.parkingsystem.model;
 
-import java.time.LocalDateTime;
 
+import java.util.Date;
+
+/**
+ * Ticket de parking.
+ */
 public class Ticket {
-    /**
-     * id du ticket.
-     */
-    private int id;
+  /**
+   * id du ticket.
+   */
+  private int id;
+  /**
+   * Information sur la place de parking.
+   */
+  private ParkingSpot parkingSpot;
+  /**
+   * Numéro de plaque du véhicule.
+   */
+  private String vehicleRegNumber;
+  /**
+   * Prix du ticket.
+   */
+  private double price;
+  /**
+   * Réduction de tarif.
+   */
+  private int discount;
+  /**
+   * Date d'arrivée du véhicule.
+   */
+  private Date inTime;
+  /**
+   * Date de sortie du véhicule.
+   */
+  private Date outTime;
+  /**
+   * Récupère l'id du ticket.
+   *
+   * @return id
+   *
+   */
 
-    /**
-     * Information sur la place de parking.
-     */
-    private ParkingSpot parkingSpot;
+  public int getId() {
+    return id;
+  }
+  /**
+   * Set de l'id du ticket.
+   *
+   * @param idTicket id
+   *
+   */
 
-    /**
-     * Numéro de plaque du véhicule.
-     */
-    private String vehicleRegNumber;
+  public void setId(final int idTicket) {
+    this.id = idTicket;
+  }
+  /**
+   * Getter de la place de parking.
+   *
+   * @return place de parking
+   *
+   */
 
-    /**
-     * Prix du ticket.
-     */
-    private double price;
+  public ParkingSpot getParkingSpot() {
+    return parkingSpot;
+  }
+  /**
+   * Setter de la place de parking.
+   *
+   * @param vehiculeSpot place
+   *
+   */
 
-    /**
-     * Réduction de tarif.
-     */
-    private int discount;
-    /**
-     * Date d'arrivée du véhicule.
-     */
-    private LocalDateTime inTime;
+  public void setParkingSpot(final ParkingSpot vehiculeSpot) {
+    this.parkingSpot = vehiculeSpot;
+  }
+  /**
+   * Getter de la plaque d'immatriculation du véhicule.
+   *
+   * @return la plaque d'immatriculation
+   *
+   */
 
-    /**
-     * Date de sortie du véhicule.
-     */
-    private LocalDateTime outTime;
+  public String getVehicleRegNumber() {
+    return vehicleRegNumber;
+  }
+  /**
+   * Setter de la plaque d'immatriculation du véhicule.
+   *
+   * @param vehicleNumber plaque
+   *
+   */
 
-    /**
-     * Récupère l'id du ticket.
-     * @return id
-     */
-    public int getId() {
-        return id;
-    }
+  public void setVehicleRegNumber(final String vehicleNumber) {
+    this.vehicleRegNumber = vehicleNumber;
+  }
+  /**
+   * Getter du prix du ticket.
+   *
+   * @return le prix
+   *
+   */
 
-    /**
-     * Set de l'id du ticket.
-     * @param idTicket
-     */
-    public void setId(final int idTicket) {
-        this.id = idTicket;
-    }
+  public double getPrice() {
+    return price;
+  }
+  /**
+   * Setter du prix du ticket.
+   *
+   * @param priceTicket prix
+   *
+   */
 
-    /**
-     * Getter de la place de parking.
-     * @return place de parking
-     */
-    public ParkingSpot getParkingSpot() {
-        return parkingSpot;
-    }
+  public void setPrice(final double priceTicket) {
+    this.price = priceTicket;
+  }
+  /**
+   * Getter de la réduction de tarif.
+   *
+   * @return discount
+   *
+   */
 
-    /**
-     * Setter de la place de parking.
-     * @param vehiculeSpot
-     */
-    public void setParkingSpot(final ParkingSpot vehiculeSpot) {
-        this.parkingSpot = vehiculeSpot;
-    }
+  public int getDiscount() {
+    return discount;
+  }
+  /**
+   * Setter de la réduction de tarif.
+   *
+   * @param discountTicket réduct
+   *
+   */
 
-    /**
-     * Getter de la plaque d'immatriculation du véhicule.
-     * @return la plaque d'immatriculation
-     */
-    public String getVehicleRegNumber() {
-        return vehicleRegNumber;
-    }
+  public void setDiscount(final int discountTicket) {
+    this.discount = discountTicket;
+  }
+  /**
+   * Getter de la date d'arrivée.
+   *
+   * @return la date d'arrivée
+   *
+   */
 
-    /**
-     * Setter de la plaque d'immatriculation du véhicule.
-     * @param vehicleNumber
-     */
-    public void setVehicleRegNumber(final String vehicleNumber) {
-        this.vehicleRegNumber = vehicleNumber;
-    }
+  public Date getInTime() {
+    return inTime;
+  }
+  /**
+   * Date d'entrée du véhicule.
+   *
+   * @param enterTime intime
+   *
+   */
 
-    /**
-     * Getter du prix du ticket.
-     * @return le prix
-     */
-    public double getPrice() {
-        return price;
-    }
+  public void setInTime(final Date enterTime) {
+    this.inTime = enterTime;
+  }
+  /**
+   * Date de sortie du véhicule.
+   *
+   * @return date de sortie
+   *
+   */
 
-    /**
-     * Setter du prix du ticket.
-     * @param priceTicket
-     */
-    public void setPrice(final double priceTicket) {
-        this.price = priceTicket;
-    }
+  public Date getOutTime() {
+    return outTime;
+  }
+  /**
+   * Setter de la date de sortie du véhicule du parking.
+   *
+   * @param quitTime outime
+   *
+   */
 
-    /**
-     * Getter de la réduction de tarif.
-     * @return discount
-     */
-    public int getDiscount() {
-        return discount;
-    }
-
-    /**
-     * Setter de la réduction de tarif.
-     * @param discountTicket
-     */
-    public void setDiscount(final int discountTicket) {
-        this.discount = discountTicket;
-    }
-
-    /**
-     * Getter de la date d'arrivée.
-     * @return la date d'arrivée
-     */
-    public LocalDateTime getInTime() {
-        return inTime;
-    }
-
-    /**
-     * Date d'entrée du véhicule.
-     * @param enterTime
-     */
-    public void setInTime(final LocalDateTime enterTime) {
-        this.inTime = enterTime;
-    }
-
-    /**
-     * Date de sortie du véhicule.
-     * @return date de sortie
-     */
-    public LocalDateTime getOutTime() {
-        return outTime;
-    }
-
-    /**
-     * Setter de la date de sortie du véhicule du parking.
-     * @param quitTime
-     */
-    public void setOutTime(final LocalDateTime quitTime) {
-        this.outTime = quitTime;
-    }
+  public void setOutTime(final Date quitTime) {
+    this.outTime = quitTime;
+  }
 }
