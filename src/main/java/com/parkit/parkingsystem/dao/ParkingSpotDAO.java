@@ -73,6 +73,7 @@ public class ParkingSpotDao {
       ps.setInt(2, parkingSpot.getId());
       int updateRowCount = ps.executeUpdate();
       dataBaseConfig.closePreparedStatement(ps);
+      ps.close();
       return (updateRowCount == 1);
     } catch (Exception ex) {
       LOGGER.error("Error updating parking info", ex);

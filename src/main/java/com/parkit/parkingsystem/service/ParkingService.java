@@ -7,6 +7,8 @@ import com.parkit.parkingsystem.model.ParkingSpot;
 import com.parkit.parkingsystem.model.Ticket;
 import com.parkit.parkingsystem.util.InputReaderUtil;
 import java.util.Date;
+
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -59,6 +61,7 @@ public class ParkingService {
    * Entrée d'un véhicule.
    */
 
+  @SuppressFBWarnings("NP_NULL_PARAM_DEREF_ALL_TARGETS_DANGEROUS")
   public void processIncomingVehicle() {
     try {
       ParkingSpot parkingSpot = getNextParkingNumberIfAvailable();

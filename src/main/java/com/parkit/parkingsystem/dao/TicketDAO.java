@@ -109,7 +109,9 @@ public class TicketDao {
                     new Timestamp(ticket.getInTime().getTime()));
       ps.setTimestamp(INDEX_5, (ticket.getOutTime() == null)
                     ? null : (new Timestamp(ticket.getOutTime().getTime())));
-      return ps.execute();
+      boolean result = ps.execute();
+      ps.close();
+      return result;
     } catch (Exception ex) {
       LOGGER.error("Error fetching next available slot", ex);
     } finally {
@@ -179,11 +181,15 @@ public class TicketDao {
               new Timestamp(ticket.getOutTime().getTime()));
       ps.setInt(INDEX_3, ticket.getId());
       ps.execute();
+      ps.close();
+      dataBaseConfig.closeConnection(con);
+
       return true;
     } catch (Exception ex) {
       LOGGER.error("Error saving ticket info", ex);
     } finally {
       dataBaseConfig.closeConnection(con);
+
     }
     return false;
   }
