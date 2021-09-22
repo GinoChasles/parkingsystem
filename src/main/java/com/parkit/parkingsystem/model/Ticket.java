@@ -143,7 +143,7 @@ public class Ticket {
    */
 
   public Date getInTime() {
-    return (Date) inTime.clone();
+    return inTime;
 
 
 
@@ -156,7 +156,7 @@ public class Ticket {
    */
 
   public void setInTime(final Date enterTime) {
-    this.inTime = (Date) enterTime.clone();
+    this.inTime = enterTime;
   }
   /**
    * Date de sortie du véhicule.
@@ -166,7 +166,7 @@ public class Ticket {
    */
 
   public Date getOutTime() {
-    return (Date) outTime.clone();
+    return outTime;
 
   }
   /**
@@ -177,6 +177,6 @@ public class Ticket {
    */
 
   public void setOutTime(final Date quitTime) {
-    this.outTime = (Date)quitTime.clone();
+    this.outTime = quitTime;
   }
 }

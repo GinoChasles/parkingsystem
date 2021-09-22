@@ -67,12 +67,26 @@ class ParkingServiceTest {
     }
 
     @Test
-    public void getVehicleTypeTest() {
+    public void getVehicleTypeCarTest() {
         when(inputReaderUtil.readSelection()).thenReturn(1);
         ParkingType type = parkingService.getVehichleType();
         Assertions.assertEquals(type, ParkingType.CAR);
     }
 
+    @Test
+    public void getVehicleTypeBikeTest() {
+        when(inputReaderUtil.readSelection()).thenReturn(2);
+        ParkingType type = parkingService.getVehichleType();
+        Assertions.assertEquals(type, ParkingType.BIKE);
+    }
+
+    @Test
+    public void getErrorVehicleTypeTest() {
+        Assertions.assertThrows(IllegalArgumentException.class, () -> {
+            when(inputReaderUtil.readSelection()).thenReturn(3);
+            parkingService.getVehichleType();
+        });
+    }
     @Test
     public void getNextParkingNumberIfAvailableTest() {
         ParkingSpot parkingSpot = new ParkingSpot(1, ParkingType.CAR, true);
@@ -80,6 +94,12 @@ class ParkingServiceTest {
 
         final int availableSlot = new ParkingSpotDao().getNextAvailableSlot(ParkingType.CAR);
         Assertions.assertEquals(1, availableSlot);
+    }
+
+    @Test
+    public void errorGetNextParkingParkingNumberTest() {
+
+
     }
 
     @Test
