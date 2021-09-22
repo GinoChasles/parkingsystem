@@ -98,8 +98,21 @@ class ParkingServiceTest {
 
     @Test
     public void errorGetNextParkingParkingNumberTest() {
+        try {
+            when(inputReaderUtil.readSelection()).thenReturn(1);
+            parkingService.getNextParkingNumberIfAvailable();
+        } catch (Exception e) {
+            Assertions.assertEquals("Error fetching next available parking slot", e.getMessage());
+        }
+    }
 
-
+    @Test
+    public void errorParsingUserInputGetNextParkingNumberTest() {
+        try {
+            parkingService.getNextParkingNumberIfAvailable();
+        } catch (IllegalArgumentException e) {
+            Assertions.assertEquals("Error parsing user input for type of vehicle", e.getMessage());
+        }
     }
 
     @Test

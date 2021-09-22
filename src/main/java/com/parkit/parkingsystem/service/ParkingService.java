@@ -61,7 +61,6 @@ public class ParkingService {
    * Entrée d'un véhicule.
    */
 
-  @SuppressFBWarnings("NP_NULL_PARAM_DEREF_ALL_TARGETS_DANGEROUS")
   public void processIncomingVehicle() {
     try {
       ParkingSpot parkingSpot = getNextParkingNumberIfAvailable();
